@@ -5,12 +5,17 @@
   "description": "Just the pre-register page for now",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
   },
   "repository": "directus/cloud",
   "author": "Rijk van Zanten <rijkvanzanten@me.com>",
   "bugs": {
     "url": "https://github.com/directus/cloud/issues"
   },
-  "homepage": "https://github.com/directus/cloud#readme"
+  "homepage": "https://github.com/directus/cloud#readme",
+  "devDependencies": {
+    "node-sass": "^4.9.0",
+    "parcel-bundler": "^1.8.1"
+  }
 }
