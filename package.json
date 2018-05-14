@@ -1,0 +1,21 @@
+{
+  "name": "@directus/cloud",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Just the pre-register page for now",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "repository": "directus/cloud",
+  "author": "Rijk van Zanten <rijkvanzanten@me.com>",
+  "bugs": {
+    "url": "https://github.com/directus/cloud/issues"
+  },
+  "homepage": "https://github.com/directus/cloud#readme",
+  "devDependencies": {
+    "node-sass": "^4.9.0",
+    "parcel-bundler": "^1.8.1"
+  }
+}
