@@ -1,2 +1,2 @@
-# cloud
-Just the pre-register page for now
+# Directus Website
+The official Directus marketing website

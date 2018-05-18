@@ -1,21 +1,34 @@
 {
-  "name": "@directus/cloud",
+  "name": "@directus/website",
   "private": true,
   "version": "1.0.0",
-  "description": "Just the pre-register page for now",
+  "description": "The official Directus marketing website",
   "main": "index.js",
   "scripts": {
     "dev": "parcel src/index.html",
     "build": "parcel build src/index.html"
   },
-  "repository": "directus/cloud",
-  "author": "Rijk van Zanten <rijkvanzanten@me.com>",
+  "repository": "directus/website",
+  "author": "Ben Haynes <ben@rngr.org>",
   "bugs": {
-    "url": "https://github.com/directus/cloud/issues"
+    "url": "https://github.com/directus/website/issues"
   },
-  "homepage": "https://github.com/directus/cloud#readme",
+  "homepage": "https://github.com/directus/website#readme",
   "devDependencies": {
+    "autoprefixer": "^8.5.0",
     "node-sass": "^4.9.0",
     "parcel-bundler": "^1.8.1"
-  }
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.0",
+    "plyr": "^3.3.7"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": true
+    }
+  },
+  "browserslist": [
+    "defaults"
+  ]
 }

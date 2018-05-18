@@ -1,0 +1,63 @@
+header {
+	position: relative;
+	background-color: $darkest-gray;
+	color: $white;
+	nav {
+		&.wide {
+			padding: 30px 80px;
+		}
+		a {
+			transition: $medium $transition color;
+			vertical-align: middle;
+			display: inline-block;
+			text-decoration: none;
+			margin-right: 40px;
+			color: $light-gray;
+			&:hover,
+			&.active {
+				color: $white;
+			}
+			&:first-of-type {
+				margin-right: 80px;
+			}
+		}
+		.user {
+			transition: $medium $transition color;
+			position: relative;
+			float: right;
+			background-color: $darker-gray;
+			border-radius: 100%;
+			width: 40px;
+			Height: 40px;
+			border: 2px solid $white;
+			color: $gray;
+			cursor: pointer;
+			&::after {
+				content: "more_vert";
+				font-family: "Material Icons";
+				font-size: 24px;
+				position: absolute;
+				top: 3px;
+				color: $white;
+			}
+			i {
+				margin: 6px;
+			}
+			&:hover {
+				color: $white;
+			}
+		}
+	}
+	.content {
+		max-width: 500px;
+		padding-top: 40px;
+		padding-bottom: 60px;
+	}
+	.angle {
+		width: 100%;
+		height: 60px;
+		path {
+			fill: $lightest-gray;
+		}
+	}
+}

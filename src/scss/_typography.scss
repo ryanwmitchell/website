@@ -1,0 +1,74 @@
+::selection {
+  background: rgba(0,0,0,0.4);
+  color: $white;
+}
+
+h1 {
+  font-size: 1.8rem;
+  font-weight: 300;
+
+  @media (min-width: $breakpoint-small) {
+    font-size: 2.25rem;
+  }
+}
+
+h2 {
+	font-size: 1.5rem;
+	line-height: 2rem;
+	color: $light-gray;
+	max-width: 600px;
+	margin: auto;
+	text-align: center;
+	b {
+		color: $darkest-gray;
+		font-weight: normal;
+	}
+}
+
+h3 {
+	font-size: 1.3rem;
+}
+
+p {
+  color: $light-gray;
+  line-height: 1.6;
+}
+
+.center {
+	text-align: center;
+}
+
+.blue {
+	transition: $medium $transition color;
+	color: $accent;
+	text-decoration: none;
+	&:hover {
+		color: $accent-dark;
+	}
+}
+
+.internal {
+	&::after {
+		transition: $medium $transition all;
+		content: "arrow_forward";
+		font-family: "Material Icons";
+		font-size: 18px;
+		vertical-align: middle;
+		margin-left: 6px;
+	}
+	&:hover {
+		&::after {
+			margin-left: 8px;
+		}
+	}
+}
+
+.external {
+	&::after {
+		content: "launch";
+		font-family: "Material Icons";
+		font-size: 18px;
+		vertical-align: middle;
+		margin-left: 6px;
+	}
+}

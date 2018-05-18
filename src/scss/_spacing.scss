@@ -1,0 +1,41 @@
+$max-space: 250;
+$increase-space: 10;
+$space: 10;
+
+@while $space <= $max-space {
+  .pad-#{$space} {
+    padding: #{$space}px;
+  }
+  .pad-t-#{$space} {
+    padding-top: #{$space}px;
+  }
+  .pad-b-#{$space} {
+    padding-bottom: #{$space}px;
+  }
+  .pad-tb-#{$space} {
+    padding-top: #{$space}px;
+    padding-bottom: #{$space}px;
+  }
+  $space: $space + $increase-space;
+}
+
+$max-margin: 250;
+$increase-margin: 10;
+$margin: 10;
+
+@while $margin <= $max-margin {
+  .margin-#{$margin} {
+    margin: #{$margin}px;
+  }
+  .margin-t-#{$margin} {
+    margin-top: #{$margin}px;
+  }
+  .margin-b-#{$margin} {
+    margin-bottom: #{$margin}px;
+  }
+  .margin-tb-#{$margin} {
+    margin-top: #{$margin}px;
+    margin-bottom: #{$margin}px;
+  }
+  $margin: $margin + $increase-margin;
+}
