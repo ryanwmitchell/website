@@ -2,7 +2,11 @@ header {
 	position: relative;
 	background-color: $darkest-gray;
 	color: $white;
+	h1 {
+		margin-top: 0;
+	}
 	nav {
+		background-color: $darkest-gray;
 		&.wide {
 			padding: 30px 80px;
 		}
@@ -50,14 +54,36 @@ header {
 	}
 	.content {
 		max-width: 500px;
-		padding-top: 40px;
-		padding-bottom: 60px;
+		padding-bottom: 40px;
+		&.with-angle {
+			padding-top: 40px;
+		}
 	}
 	.angle {
 		width: 100%;
 		height: 60px;
 		path {
 			fill: $lightest-gray;
+		}
+	}
+}
+
+.subheader {
+	// height: 60px;
+	background-color: $white;
+	width: 100%;
+	text-align: right;
+	.wide {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+	a {
+		margin-left: 40px;
+		text-decoration: none;
+		color: $light-gray;
+		&.active,
+		&:hover {
+			color: $darkest-gray;
 		}
 	}
 }

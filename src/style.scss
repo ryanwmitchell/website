@@ -9,6 +9,8 @@
 @import "./scss/_header.scss";
 @import "./scss/_footer.scss";
 
+@import "./scss/_card.scss";
+
 body {
 	background-color: $lightest-gray;
 	color: $darkest-gray;
@@ -16,6 +18,19 @@ body {
 
 main {
 	margin-bottom: 40px;
+}
+
+section {
+	&.invert {
+		background-color: $darkest-gray;
+		color: $white;
+		h2 {
+			color: $light-gray;
+			b {
+				color: $white;
+			}
+		}
+	}
 }
 
 .wide {
@@ -51,9 +66,11 @@ main {
 	border-radius: 3px;
 	box-shadow: 0px 10px 30px 0px rgba(0,0,0,0.2);
 	text-align: center;
+	overflow: hidden;
 	&.small {
 		background-color: $darkest-gray;
 		max-height: 220px;
+		height: 100%;
 		max-width: 300px;
 		padding-bottom: 0;
 		&::before {
@@ -129,6 +146,24 @@ main {
 		}
 		p {
 			margin-bottom: 20px;
+		}
+	}
+}
+.three-up {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	margin-top: 60px;
+	& > div {
+		width: calc(33% - 40px);
+		max-width: 300px;
+		h4 {
+			margin-top: 15px;
+			margin-bottom: 20px;
+		}
+		p {
+			margin-bottom: 20px;
+			font-size: 0.875rem;
 		}
 	}
 }
@@ -313,7 +348,10 @@ aside {
 	justify-content: center;
 	flex-direction: row;
 	justify-content: flex-end;
-	margin-top: 80px;
+	align-items: center;
+	&.space {
+		margin-top: 80px;
+	}
 	.window {
 		margin-right: 60px;
 	}

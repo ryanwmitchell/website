@@ -1,0 +1,91 @@
+.extensions {
+	position: relative;
+	margin-top: 60px;
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		width: 40px;
+		background-color: rgba(38,50,56,0);
+		background: linear-gradient(to right, rgba(38,50,56,1) 0%, rgba(38,50,56,0) 100%);
+		z-index: 1;
+	}
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		width: 40px;
+		background-color: rgba(38,50,56,0);
+		background: linear-gradient(to right, rgba(38,50,56,0) 0%, rgba(38,50,56,1) 100%);
+		z-index: 1;
+	}
+	.arrow {
+		position: absolute;
+		top: 20%;
+		color: $lighter-gray;
+		cursor: pointer;
+		padding: 20px;
+		font-size: 36px;
+		transition: $medium $transition color;
+		&:hover {
+			color: $white;
+		}
+		&.prev {
+			left: -80px;
+		}
+		&.next {
+			right: -80px;
+		}
+	}
+	.card {
+		position: relative;
+		background-color: $white;
+		border-radius: $border-radius;
+		padding: 120px 20px 35px;
+		max-width: 280px;
+		box-shadow: 0px 10px 30px 0px rgba(0,0,0,0.2);
+		margin: 0 20px;
+		height: auto;
+		outline: none;
+		.header {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			padding: 24px;
+			height: 100px;
+			text-align: center;
+			border-radius: $border-radius $border-radius 0 0;
+			&.yellow-bg {
+				background-color: $warning;
+			}
+			&.green-bg {
+				background-color: $success;
+			}
+			&.blue-bg {
+				background-color: $accent;
+			}
+			&.red-bg {
+				background-color: $danger;
+			}
+			.material-icons {
+				font-size: 48px;
+			}
+		}
+		h4 {
+			color: $darkest-gray;
+		}
+		h5 {
+			color: $lighter-gray;
+			margin-top: 2px;
+			margin-bottom: 15px;
+			b {
+				color: $lighter-gray;
+			}
+		}
+	}
+}
