@@ -1,0 +1,55 @@
+.requests {
+	list-style: none;
+	padding: 0;
+	margin-top: 80px;
+	li {
+		transition: $medium $transition all;
+		position: relative;
+		background-color: rgba(38,50,56,0.04);
+		border-radius: $border-radius;
+		padding: 30px 30px 30px 60px;
+		margin-bottom: 10px;
+		cursor: pointer;
+		&:hover {
+			// transform: translatey(-2px);
+			&::after {
+				color: $dark-gray;
+				right: 18px;
+			}
+		}
+		&::after {
+			transition: $medium $transition all;
+			content: "arrow_forward";
+			font-family: "Material Icons";
+			font-size: 24px;
+			position: absolute;
+			top: 25px;
+			right: 20px;
+			bottom: 0;
+			color: $light-gray;
+		}
+		.vote {
+			position: absolute;
+			top: 12px;
+			left: 20px;
+			bottom: 0;
+			font-weight: 600;
+			color: $light-gray;
+			text-align: center;
+			.material-icons {
+				transition: $medium $transition all;
+				font-size: 18px;
+				color: $lighter-gray;
+				&:hover {
+					color: $accent;
+				}
+			}
+		}
+		.title {
+			i {
+				color: $light-gray;
+				margin-left: 10px;
+			}
+		}
+	}
+}

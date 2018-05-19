@@ -10,7 +10,7 @@ $(document).ready(function(){
 
 	$('.extensions').slick({
 		autoplay: true,
-		autoplaySpeed: 5000,
+		autoplaySpeed: 3000,
 		centerMode: true,
 		centerPadding: '50px',
 		slidesToShow: 3,

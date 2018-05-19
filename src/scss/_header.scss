@@ -31,8 +31,8 @@ header {
 			float: right;
 			background-color: $darker-gray;
 			border-radius: 100%;
-			width: 40px;
-			Height: 40px;
+			width: 41px;
+			Height: 41px;
 			border: 2px solid $white;
 			color: $gray;
 			cursor: pointer;
@@ -42,10 +42,12 @@ header {
 				font-size: 24px;
 				position: absolute;
 				top: 3px;
+				right: -24px;
 				color: $white;
 			}
 			i {
-				margin: 6px;
+				margin-top: 5px;
+				margin-left: 7px;
 			}
 			&:hover {
 				color: $white;
@@ -73,11 +75,13 @@ header {
 	background-color: $white;
 	width: 100%;
 	text-align: right;
+	font-size: 0.875rem;
 	.wide {
 		padding-top: 20px;
 		padding-bottom: 20px;
 	}
 	a {
+		transition: $medium $transition color;
 		margin-left: 40px;
 		text-decoration: none;
 		color: $light-gray;

@@ -41,51 +41,93 @@
 			right: -80px;
 		}
 	}
+}
+
+.tiers {
+	position: relative;
+	margin-top: 80px;
+	display: flex;
+	justify-content: space-between;
 	.card {
-		position: relative;
-		background-color: $white;
-		border-radius: $border-radius;
-		padding: 120px 20px 35px;
-		max-width: 280px;
-		box-shadow: 0px 10px 30px 0px rgba(0,0,0,0.2);
-		margin: 0 20px;
-		height: auto;
-		outline: none;
-		.header {
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			padding: 24px;
-			height: 100px;
-			text-align: center;
-			border-radius: $border-radius $border-radius 0 0;
-			&.yellow-bg {
-				background-color: $warning;
-			}
-			&.green-bg {
-				background-color: $success;
-			}
-			&.blue-bg {
-				background-color: $accent;
-			}
-			&.red-bg {
-				background-color: $danger;
-			}
-			.material-icons {
-				font-size: 48px;
+		flex-grow: 1;
+		flex-basis: 50px;
+		text-align: center;
+		margin: 0 10px;
+		padding-bottom: 20px;
+		&.recommended {
+			transform: scale(1.05);
+		}
+		ul {
+			list-style: none;
+			padding: 0;
+			margin-top: 20px;
+			margin-bottom: 20px;
+			li {
+				margin: 5px;
 			}
 		}
-		h4 {
-			color: $darkest-gray;
+		h2 {
+			font-size: 36px;
+			margin: 25px 0 0;
 		}
-		h5 {
+		button {
+			background-color: $darkest-gray;
+			color: $white;
+			border-color: $darkest-gray;
+			margin-top: 20px;
+			margin-bottom: 0;
+		}
+	}
+}
+
+.card {
+	position: relative;
+	background-color: $white;
+	border-radius: $border-radius;
+	padding: 120px 20px 35px;
+	max-width: 280px;
+	box-shadow: 0px 10px 30px 0px rgba(0,0,0,0.2);
+	margin: 0 20px;
+	height: auto;
+	outline: none;
+	.header {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		padding: 24px;
+		height: 100px;
+		text-align: center;
+		border-radius: $border-radius $border-radius 0 0;
+		&.yellow-bg {
+			background-color: $warning;
+		}
+		&.green-bg {
+			background-color: $success;
+		}
+		&.blue-bg {
+			background-color: $accent;
+		}
+		&.red-bg {
+			background-color: $danger;
+		}
+		&.black-bg {
+			background-color: $darkest-gray;
+			color: $white;
+		}
+		.material-icons {
+			font-size: 48px;
+		}
+	}
+	h4 {
+		color: $darkest-gray;
+	}
+	h5 {
+		color: $lighter-gray;
+		margin-top: 2px;
+		margin-bottom: 15px;
+		b {
 			color: $lighter-gray;
-			margin-top: 2px;
-			margin-bottom: 15px;
-			b {
-				color: $lighter-gray;
-			}
 		}
 	}
 }
