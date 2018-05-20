@@ -35,6 +35,7 @@ $ npm run dev
 
 ## Deployment
 ```
+npm run build
 cd dist
 git init
 git add -A
