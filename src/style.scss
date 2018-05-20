@@ -403,6 +403,7 @@ section {
 		}
 		p {
 			padding: 0;
+			text-align: center;
 			b {
 				text-align: center;
 			}
@@ -572,7 +573,7 @@ aside {
 .badge {
 	border-radius: $border-radius;
 	padding: 2px 6px 2px;
-	margin-left: 6px;
+	margin-left: 4px;
 	font-size: 0.611111rem;
 	text-transform: uppercase;
 	font-weight: 600;
@@ -596,6 +597,24 @@ aside {
 	}
 	&.danger {
 		background-color: $danger;
+	}
+}
+
+#join-us {
+	text-align: center;
+	img {
+		background-blend-mode: multiply; // Legacy
+	}
+}
+
+#supporting-directus {
+	h2 {
+		margin-bottom: 40px;
+	}
+	p {
+		margin: 20px auto;
+		max-width: 600px;
+
 	}
 }
 
