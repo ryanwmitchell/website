@@ -40,8 +40,17 @@ section {
 	max-width: 1160px;
 	padding: 80px;
 
+	&> img {
+		max-width: 100%;
+	}
+	@media (max-width: $breakpoint-large) {
+		padding: 80px 60px;
+	}
+	@media (max-width: $breakpoint-medium) {
+		padding: 80px 40px;
+	}
 	@media (max-width: $breakpoint-small) {
-		padding: 0 40px;
+		padding: 60px 20px;
 	}
 }
 
@@ -54,6 +63,39 @@ section {
 		left: 80px;
 		right: 80px;
 		bottom: 0;
+	}
+}
+
+aside {
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	justify-content: flex-end;
+	align-items: center;
+	@media (max-width: $breakpoint-small) {
+		flex-wrap: wrap;
+	}
+	&.space {
+		margin-top: 80px;
+	}
+	.window {
+		margin-right: 60px;
+	}
+	& > div {
+		h3 {
+			font-size: 1.5rem;
+		}
+		p {
+			margin-top: 20px;
+			margin-bottom: 20px;
+			font-size: 1.1rem;
+		}
+		.links {
+			a {
+				display: block;
+				margin-bottom: 5px;
+			}
+		}
 	}
 }
 
@@ -74,6 +116,12 @@ section {
 		height: 100%;
 		max-width: 300px;
 		padding-bottom: 0;
+		@media (max-width: $breakpoint-small) {
+			width: 100%;
+			max-width: 100%;
+			margin-right: 0;
+			margin-bottom: 40px;
+		}
 		&::before {
 			// background-color: $accent;
 		}
@@ -160,10 +208,24 @@ section {
 	justify-content: center;
 	margin-top: 60px;
 	transform: translatex(20px); // Optical
+	@media (max-width: $breakpoint-medium) {
+		transform: translatex(0); // Optical
+	}
 	& > div {
-		width: 50%;
+		width: calc(50% - 40px);
 		max-width: 350px;
 		margin: 20px;
+		@media (max-width: $breakpoint-large) {
+			// max-width: 270px;
+		}
+		@media (max-width: $breakpoint-medium) {
+			width: 100%;
+			max-width: 400px;
+			margin: 40px;
+		}
+		@media (max-width: $breakpoint-small) {
+			margin: 40px 20px;
+		}
 		.material-icons {
 			font-size: 36px;
 		}
@@ -258,6 +320,15 @@ section {
 		text-align: center;
 		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
 		transform: translatey(0px);
+		transition: 800ms $transition all;
+		i {
+			content: "store";
+			font-family: "Material Icons";
+			font-size: 96px;
+			top: 25px;
+			position: relative;
+			opacity: 0.3;
+		}
 		span {
 			position: absolute;
 			left: 0;
@@ -271,14 +342,6 @@ section {
 			background-color: $darkest-gray;
 			border-bottom: 2px solid $black;
 			color: $white;
-			&::after {
-				content: "store";
-				font-family: "Material Icons";
-				font-size: 96px;
-				top: 20px;
-				position: relative;
-				opacity: 0.3;
-			}
 		}
 		&:nth-child(2) {
 			animation: float-2 6.3s ease-in-out infinite;
@@ -295,6 +358,72 @@ section {
 			color: $light-gray;
 		}
 	}
+	&.sdk {
+
+	}
+	&.api {
+
+	}
+	&.database {
+		#app {
+			top: 40px;
+		}
+		#api {
+			opacity: 0;
+		}
+	}
+	&.none {
+		#app {
+			opacity: 0;
+			top: 40px;
+		}
+		#api {
+			opacity: 0;
+		}
+	}
+}
+
+.connections {
+	text-align: center;
+	margin-top: 60px;
+	h4 {
+		font-style: italic;
+		color: $light-gray;
+	}
+	div {
+		display: inline-block;
+		border: 1px solid $lighter-gray;
+		padding: 6px 16px;
+		margin-top: 20px;
+		cursor: pointer;
+		margin-left: -1px;
+		color: $gray;
+		&:first-of-type {
+			border-radius: 30px 0 0 30px;
+		}
+		&:last-of-type {
+			border-radius: 0 30px 30px 0;
+		}
+		&:hover {
+			color: $darkest-gray;
+		}
+		&.active {
+			color: $darkest-gray;
+			background-color: $lighter-gray;
+		}
+	}
+}
+
+.connection_output {
+	display: none;
+	margin: 90px auto;
+	max-width: 700px;
+	text-align: center;
+	color: $darkest-gray;
+	&.active {display: grid;}
+	p {
+		font-size: 1.125rem;
+	}
 }
 
 .contact,
@@ -302,9 +431,8 @@ section {
 .brands,
 .icons {
 	--columns: 3;
-	display: flex;
-	display: grid;
-	max-width: 716px;
+	// display: grid;
+	max-width: 700px;
 	flex-wrap: wrap;
 	justify-content: space-around;
 	padding: 0;
@@ -333,7 +461,6 @@ section {
 		margin: 1em 0 2em 0;
 		color: $lighter-gray;
 		font-size: 16px;
-		font-weight: 500;
 		letter-spacing: 0.1px;
 		line-height: 20px;
 		text-decoration: none;
@@ -406,36 +533,6 @@ section {
 			text-align: center;
 			b {
 				text-align: center;
-			}
-		}
-	}
-}
-
-aside {
-	display: flex;
-	justify-content: center;
-	flex-direction: row;
-	justify-content: flex-end;
-	align-items: center;
-	&.space {
-		margin-top: 80px;
-	}
-	.window {
-		margin-right: 60px;
-	}
-	& > div {
-		h3 {
-			font-size: 1.5rem;
-		}
-		p {
-			margin-top: 20px;
-			margin-bottom: 20px;
-			font-size: 1.1rem;
-		}
-		.links {
-			a {
-				display: block;
-				margin-bottom: 5px;
 			}
 		}
 	}
@@ -537,6 +634,23 @@ aside {
 			padding: 0;
 			margin-top: 10px;
 		}
+		@media (max-width: $breakpoint-large) {
+			margin: 30px;
+		}
+		@media (max-width: $breakpoint-medium) {
+			margin: 20px;
+		}
+		@media (max-width: $breakpoint-small) {
+			img {
+				width: 100px;
+				height: 100px;
+			}
+		}
+		@media (max-width: 500px) {
+			&:first-of-type {
+				width: 100%;
+			}
+		}
 	}
 	&.large {
 		width: 140px;
@@ -549,6 +663,13 @@ aside {
 			font-size: 0.875rem;
 			padding: 0;
 			margin-top: 6px;
+		}
+		@media (max-width: $breakpoint-small) {
+			width: 100px;
+			img {
+				width: 60px;
+				height: 60px;
+			}
 		}
 	}
 	img {

@@ -40,7 +40,7 @@ $(document).ready(function(){
 	$('.testimonials').slick({
 		autoplay: true,
 		autoplaySpeed: 5000,
-		adaptiveHeight: true,
+		// adaptiveHeight: true,
 		dots: true,
 		prevArrow: '<i class="material-icons prev arrow">arrow_back</i>',
 		nextArrow: '<i class="material-icons next arrow">arrow_forward</i>'
@@ -54,6 +54,57 @@ $(document).ready(function(){
 		slidesToShow: 3,
 		prevArrow: '<i class="material-icons prev arrow">arrow_back</i>',
 		nextArrow: '<i class="material-icons next arrow">arrow_forward</i>'
+	});
+
+	//////////////////////////////////////////////////////////////////////////////
+	// Dynamic layers components
+
+	$('.connections div').on("click", function(e) {
+		$('.connections div').removeClass('active');
+		$(this).addClass('active');
+
+		if($(this).text() == "SDK"){
+			$('.connection_output').removeClass('active');
+			$('.connection_output.sdks').addClass('active');
+			$('.layers #app span').text("Your App" + $('ul.icons li.active').data('language'));
+
+			$('.layers').addClass('sdk');
+			$('.layers').removeClass('api');
+			$('.layers').removeClass('database');
+			$('.layers').removeClass('none');
+		} else if($(this).text() == "API"){
+			$('.connection_output').removeClass('active');
+			$('.connection_output.api').addClass('active');
+			$('.layers #app span').text("Your App");
+
+			$('.layers').removeClass('sdk');
+			$('.layers').addClass('api');
+			$('.layers').removeClass('database');
+			$('.layers').removeClass('none');
+		} else if($(this).text() == "Database"){
+			$('.connection_output').removeClass('active');
+			$('.connection_output.database').addClass('active');
+			$('.layers #app span').text("Your App");
+
+			$('.layers').removeClass('sdk');
+			$('.layers').removeClass('api');
+			$('.layers').addClass('database');
+			$('.layers').removeClass('none');
+		} else if($(this).text() == "None"){
+			$('.connection_output').removeClass('active');
+			$('.connection_output.none').addClass('active');
+
+			$('.layers').removeClass('sdk');
+			$('.layers').removeClass('api');
+			$('.layers').removeClass('database');
+			$('.layers').addClass('none');
+		}
+	});
+
+	$('ul.icons li').on("click", function(e) {
+		event.preventDefault();
+		$('.layers #app span').text("Your App" + $(this).data('language'));
+		$('.layers #app i').html($(this).data('icon'));
 	});
 
 	//////////////////////////////////////////////////////////////////////////////

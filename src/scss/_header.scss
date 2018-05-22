@@ -3,16 +3,38 @@ nav.top {
 	transition: $slow $transition all;
 	position: fixed;
 	top: 0;
+	left: 0;
+	right: 0;
 	z-index: 2;
 	margin-top: 0;
 	background-color: $darkest-gray;
 	// background-color: rgba(38,50,56,0.9);
-	&.wide {
+	.wide {
 		padding: 30px 80px;
+		@media (max-width: $breakpoint-large) {
+			padding: 30px 60px;
+		}
+		@media (max-width: $breakpoint-medium) {
+			padding: 30px 40px;
+		}
+		@media (max-width: $breakpoint-small) {
+			padding: 30px 20px;
+		}
 	}
 	&.short {
 		box-shadow: 0px 2px 10px 0px rgba(0,0,0,0.1);
-		padding: 10px 80px;
+		.wide {
+			padding: 10px 80px;
+			@media (max-width: $breakpoint-large) {
+				padding: 10px 60px;
+			}
+			@media (max-width: $breakpoint-medium) {
+				padding: 10px 40px;
+			}
+			@media (max-width: $breakpoint-small) {
+				padding: 10px 20px;
+			}
+		}
 	}
 	&.hide {
 		margin-top: -80px;
@@ -29,7 +51,7 @@ nav.top {
 			color: $white;
 		}
 		&:first-of-type {
-			margin-right: 80px;
+			margin-right: 60px;
 		}
 	}
 	.user {
@@ -112,5 +134,8 @@ header {
 		&:hover {
 			color: $darkest-gray;
 		}
+	}
+	@media (max-width: $breakpoint-small) {
+		display: none;
 	}
 }
