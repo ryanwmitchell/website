@@ -19,6 +19,12 @@ h2 {
 	max-width: 640px;
 	margin: auto;
 	text-align: center;
+	&.vision {
+		max-width: 800px;
+		text-align: left;
+		margin-top: 80px;
+		margin-bottom: 80px;
+	}
 	b {
 		color: $darkest-gray;
 		font-weight: normal;

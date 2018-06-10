@@ -130,6 +130,15 @@ aside {
 			max-width: 100%;
 			max-height: 100%;
 			padding: 20px 30px 30px;
+			&.pad-directus {
+				padding: 40px 60px 30px;
+			}
+			&.pad-ranger {
+				padding: 80px 60px 30px;
+			}
+			&.pad-cloud {
+				padding: 40px 60px 30px;
+			}
 		}
 	}
 	&.chromeless {
@@ -214,7 +223,7 @@ aside {
 	& > div {
 		width: calc(50% - 40px);
 		max-width: 350px;
-		margin: 20px;
+		margin: 30px 20px;
 		@media (max-width: $breakpoint-large) {
 			// max-width: 270px;
 		}
@@ -242,10 +251,10 @@ aside {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-between;
-	margin-top: 60px;
 	& > div {
 		width: calc(33% - 40px);
 		max-width: 300px;
+		margin-top: 60px;
 		h4 {
 			margin-top: 15px;
 			margin-bottom: 20px;
@@ -264,7 +273,11 @@ aside {
 	}
 	30% {
 		box-shadow: 0 24px 40px 0px rgba(0,0,0,0.1);
-		transform: rotateX(40deg) translatey(-7px) scale(1);
+		transform: rotateX(40deg) translatey(-5px) scale(1);
+	}
+	70% {
+		box-shadow: 0 6px 35px 0px rgba(0,0,0,0.1);
+		transform: rotateX(40deg) translatey(2px) scale(1);
 	}
 	100% {
 		box-shadow: 0 8px 35px 0px rgba(0,0,0,0.2);
@@ -277,9 +290,13 @@ aside {
 		box-shadow: 0 8px 30px 0px rgba(0,0,0,0.2);
 		transform: rotateX(40deg) translatey(0px) scale(1);
 	}
-	50% {
+	40% {
 		box-shadow: 0 24px 35px 0px rgba(0,0,0,0.1);
-		transform: rotateX(40deg) translatey(-7px) scale(1);
+		transform: rotateX(40deg) translatey(-6px) scale(1);
+	}
+	80% {
+		box-shadow: 0 16px 32px 0px rgba(0,0,0,0.1);
+		transform: rotateX(40deg) translatey(-2px) scale(1);
 	}
 	100% {
 		box-shadow: 0 8px 30px 0px rgba(0,0,0,0.2);
@@ -289,22 +306,26 @@ aside {
 
 @keyframes float-1 {
 	0% {
-		box-shadow: 0 8px 25px 0px rgba(0,0,0,0.4);
+		box-shadow: 0 8px 25px 0px rgba(0,0,0,0.3);
 		transform: rotateX(40deg) translatey(0px) scale(1);
 	}
-	40% {
-		box-shadow: 0 24px 30px 0px rgba(0,0,0,0.2);
-		transform: rotateX(40deg) translatey(-7px) scale(1);
+	20% {
+		box-shadow: 0 20px 30px 0px rgba(0,0,0,0.2);
+		transform: rotateX(40deg) translatey(-5px) scale(1);
+	}
+	60% {
+		box-shadow: 0 6px 20px 0px rgba(0,0,0,0.4);
+		transform: rotateX(40deg) translatey(3px) scale(1);
 	}
 	100% {
-		box-shadow: 0 8px 25px 0px rgba(0,0,0,0.4);
+		box-shadow: 0 8px 25px 0px rgba(0,0,0,0.3);
 		transform: rotateX(40deg) translatey(0px) scale(1);
 	}
 }
 
 .layers {
 	position: relative;
-	margin: 80px auto;
+	margin: 60px auto 100px;
 	width: 300px;
 	height: 230px;
 	transform: translate3d(0, 0, 0);
@@ -337,7 +358,7 @@ aside {
 			text-align: center;
 		}
 		&:nth-child(3) {
-			animation: float-3 7s ease-in-out infinite;
+			animation: float-3 8s ease-in-out infinite;
 			top: 0px;
 			background-color: $darkest-gray;
 			border-bottom: 2px solid $black;
@@ -351,7 +372,7 @@ aside {
 			color: $white;
 		}
 		&:nth-child(1) {
-			animation: float-1 7.8s ease-in-out infinite;
+			animation: float-1 10.8s ease-in-out infinite;
 			top: 80px;
 			background-color: $white;
 			border-bottom: 2px solid $lightest-gray;
@@ -416,7 +437,7 @@ aside {
 
 .connection_output {
 	display: none;
-	margin: 90px auto;
+	margin: 100px auto;
 	max-width: 700px;
 	text-align: center;
 	color: $darkest-gray;
@@ -426,12 +447,15 @@ aside {
 	}
 }
 
+.brand-asset-colors,
+.brand-asset-logos,
+.brand-asset-icons,
 .contact,
 .features,
 .brands,
-.icons {
+.icons,
+.sdks {
 	--columns: 3;
-	// display: grid;
 	max-width: 700px;
 	flex-wrap: wrap;
 	justify-content: space-around;
@@ -484,7 +508,12 @@ aside {
 	}
 }
 
+.icons {
+	display: grid;
+}
+
 .features {
+	display: grid;
 	max-width: 1000px;
 	margin-top: 0;
 	li {
@@ -502,6 +531,7 @@ aside {
 }
 
 .brands {
+	display: grid;
 	--columns: 3;
 	@media (min-width: 700px) { --columns: 5; }
 	li {
@@ -516,10 +546,120 @@ aside {
 	}
 }
 
+.brand-asset-logos {
+	display: grid;
+	--columns: 3;
+	@media (min-width: 700px) { --columns: 3; }
+	li {
+		position: relative;
+		img {
+			position: relative;
+			margin-bottom: 10px;
+		}
+		a {
+			color: $dark-gray;
+			text-decoration: none;
+		}
+		.details {
+			font-size: 0.875rem;
+		}
+		&:hover,
+		&:focus {
+			color: $lighter-gray;
+			cursor: default;
+			path {
+				fill: default;
+			}
+		}
+	}
+}
+
+.brand-asset-icons {
+	display: grid;
+	--columns: 3;
+	margin-top: 40px;
+	@media (min-width: 700px) { --columns: 5; }
+	li {
+		position: relative;
+		img {
+			position: relative;
+			max-height: 100px;
+			margin-bottom: 10px;
+		}
+		a {
+			color: $dark-gray;
+			text-decoration: none;
+		}
+		.details {
+			font-size: 0.875rem;
+			font-weight: 500;
+		}
+		&:hover,
+		&:focus {
+			color: $lighter-gray;
+			cursor: default;
+			path {
+				fill: default;
+			}
+		}
+	}
+}
+
+.brand-asset-colors {
+	display: grid;
+	--columns: 4;
+	margin-top: 40px;
+	@media (min-width: 700px) { --columns: 8; }
+	li {
+		position: relative;
+		text-align: center;
+		span {
+			position: relative;
+			border-radius: 100%;
+			width: 60px;
+			height: 60px;
+			margin-bottom: 10px;
+		}
+		a {
+			color: $dark-gray;
+			text-decoration: none;
+		}
+		.details {
+			font-size: 0.875rem;
+		}
+		&:hover,
+		&:focus {
+			color: $lighter-gray;
+			cursor: default;
+			path {
+				fill: default;
+			}
+		}
+	}
+}
+
+.brand-assets-description {
+	color: $light-gray;
+	max-width: 640px;
+	margin: auto;
+	text-align: center;
+	margin-top: 40px;
+	.buttons {
+		margin-top: 80px;
+	}
+}
+
 .contact {
-	--columns: 2;
+	display: grid;
+	--columns: 6;
+	max-width: 1000px;
 	justify-content: space-between;
-	@media (min-width: 700px) { --columns: 4; }
+	@media (max-width: 800px) {
+		--columns: 3;
+	}
+	@media (max-width: 500px) {
+		--columns: 2;
+	}
 	li {
 		position: relative;
 		height: 100px;
@@ -701,6 +841,9 @@ aside {
 	position: relative;
 	color: rgba(255, 255, 255, 0.9);
 	background-color: $accent;
+	&.space {
+		margin-left: 8px;
+	}
 	&.free {
 		top: -4px;
 	}
@@ -718,6 +861,15 @@ aside {
 	}
 	&.danger {
 		background-color: $danger;
+	}
+	&.gray {
+		background-color: $dark-gray;
+	}
+	.material-icons {
+		font-size: 16px;
+		vertical-align: bottom;
+		margin-right: 4px;
+		margin-left: -2px;
 	}
 }
 
@@ -779,6 +931,11 @@ button.styled,
 
 	&.ghost {
 		background-color: transparent;
+		color: $white;
+	}
+	&.dark {
+		background-color: $darkest-gray;
+		border-color: $darkest-gray;
 		color: $white;
 	}
 }

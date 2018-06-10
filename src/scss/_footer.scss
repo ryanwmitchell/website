@@ -70,13 +70,10 @@ footer {
 			display: flex;
 			justify-content: space-between;
 			@media (max-width: $breakpoint-large) {
-				padding: 30px 60px 100px;
+				padding: 30px 60px 140px;
 			}
 			@media (max-width: $breakpoint-small) {
-				padding: 30px 40px 100px;
-			}
-			@media (max-width: $breakpoint-small) {
-				padding: 30px 20px 100px;
+				padding: 30px 20px 140px;
 				--columns: 2;
 				flex-wrap: wrap;
 				ul {
@@ -92,6 +89,30 @@ footer {
 				font-size: 0.6875rem;
 				font-weight: 600;
 				color: $dark-gray;
+			}
+			a {
+				transition: $fast $transition all;
+				&:hover {
+					color: $white;
+				}
+			}
+			.social {
+				margin-top: 10px;
+				a {
+					svg {
+						width: 20px;
+						margin-right: 10px;
+						vertical-align: middle;
+						path,
+						polygon {
+							transition: $fast $transition all;
+						}
+					}
+					&:hover svg path,
+					&:hover svg polygon {
+						fill: $white !important;
+					}
+				}
 			}
 		}
 		ul {

@@ -66,7 +66,7 @@ $(document).ready(function(){
 		if($(this).text() == "SDK"){
 			$('.connection_output').removeClass('active');
 			$('.connection_output.sdks').addClass('active');
-			$('.layers #app span').text("Your App" + $('ul.icons li.active').data('language'));
+			$('.layers #app span').text("Your App" + $('ul.sdks li.active').data('language'));
 
 			$('.layers').addClass('sdk');
 			$('.layers').removeClass('api');
@@ -101,10 +101,12 @@ $(document).ready(function(){
 		}
 	});
 
-	$('ul.icons li').on("click", function(e) {
+	$('ul.sdks li').on("click", function(e) {
 		event.preventDefault();
 		$('.layers #app span').text("Your App" + $(this).data('language'));
 		$('.layers #app i').html($(this).data('icon'));
+		$('.sdks li').removeClass('active');
+		$(this).addClass('active');
 	});
 
 	//////////////////////////////////////////////////////////////////////////////

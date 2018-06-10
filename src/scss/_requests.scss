@@ -48,11 +48,15 @@
 			}
 		}
 		.title {
-			i {
+			.feature {
+				@media (max-width: $breakpoint-medium) {
+					display: block;
+				}
+			}
+			i.details {
 				color: $light-gray;
 				margin-left: 10px;
 				@media (max-width: $breakpoint-medium) {
-					display: block;
 					margin-left: 0;
 				}
 			}
