@@ -25,6 +25,15 @@ $(document).ready(function(){
 	});
 
 	//////////////////////////////////////////////////////////////////////////////
+	// Roadmap button
+
+	$('#show_roadmap').on("click", function(e) {
+		event.preventDefault();
+		$('.roadmap .hidden').removeClass('hidden');
+		$('#show_roadmap_container').hide();
+	});
+
+	//////////////////////////////////////////////////////////////////////////////
 	// Smooth scroll to anchors
 
 	$(document).on('click', 'a[href^="#"]', function (event) {

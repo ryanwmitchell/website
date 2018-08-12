@@ -11,6 +11,7 @@
 
 @import "./scss/_card.scss";
 @import "./scss/_requests.scss";
+@import "./scss/_roadmap.scss";
 
 body {
 	background-color: $lightest-gray;
@@ -739,15 +740,29 @@ aside {
 }
 
 .team {
-	margin: 80px auto;
+	margin: 60px auto;
 	padding: 0;
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: center;
 	&.contributors {
 		margin-top: 0;
-		margin-bottom: 0;
 		max-width: 840px;
+	}
+	&.sponsors {
+		margin-bottom: 0;
+		margin-top: 0;
+		max-width: 840px;
+		.material-icons {
+			border-radius: 100%;
+			border: 2px solid $white;
+			background-color: $lighter-gray;
+			color: $light-gray;
+			font-size: 42px;
+			padding: 17px 18px;
+			width: 80px;
+			height: 80px;
+		}
 	}
 	.byline {
 		text-align: center;
@@ -755,6 +770,13 @@ aside {
 	img {
 		-webkit-filter: grayscale(100%);
 		filter: grayscale(100%);
+	}
+	a {
+		transition: $medium $transition opacity;
+		text-decoration: none;
+		&:hover {
+			opacity: 0.8;
+		}
 	}
 }
 
@@ -898,6 +920,7 @@ aside {
 button.styled,
 .buttons button,
 .buttons a {
+	transition: $medium $transition all;
 	display: inline-block;
 	text-decoration: none;
 	text-align: center;
@@ -937,6 +960,21 @@ button.styled,
 		background-color: $darkest-gray;
 		border-color: $darkest-gray;
 		color: $white;
+		&.ghost {
+			background-color: transparent;
+			color: $darkest-gray;
+			border-color: $darkest-gray;
+		}
+	}
+	&.bright {
+		background-color: $accent;
+		border-color: $accent;
+		color: $white;
+		&.ghost {
+			background-color: transparent;
+			color: $accent;
+			border-color: $accent;
+		}
 	}
 }
 
@@ -974,6 +1012,22 @@ button.styled,
 		background: $white;
 		svg {
 			fill:  $darkest-gray
+		}
+	}
+}
+
+#fair-usage,
+#terms,
+#privacy {
+	color: $light-gray;
+	line-height: 24px;
+	p {
+		margin: 40px 0;
+	}
+	ol {
+		margin: 40px 0;
+		li {
+			margin: 20px 0;
 		}
 	}
 }
