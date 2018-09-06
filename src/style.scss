@@ -35,6 +35,7 @@ section {
 	}
 }
 
+.narrow,
 .wide {
 	margin: auto;
 	width: 100%;
@@ -53,6 +54,10 @@ section {
 	@media (max-width: $breakpoint-small) {
 		padding: 60px 20px;
 	}
+}
+
+.narrow {
+	max-width: 800px;
 }
 
 .border {
@@ -448,6 +453,7 @@ aside {
 	}
 }
 
+.brand-asset-badges,
 .brand-asset-colors,
 .brand-asset-logos,
 .brand-asset-icons,
@@ -511,6 +517,17 @@ aside {
 
 .icons {
 	display: grid;
+	li {
+		text-align: center;
+		a {
+			text-decoration: none;
+			svg {
+				display: block;
+				height: 50px;
+				margin: 0 auto 1em;
+			}
+		}
+	}
 }
 
 .features {
@@ -519,6 +536,9 @@ aside {
 	margin-top: 0;
 	li {
 		color: $gray;
+		&:hover {
+			cursor: default;
+		}
 	}
 
 	@media (min-width: 560px) { --columns: 4; }
@@ -549,13 +569,16 @@ aside {
 
 .brand-asset-logos {
 	display: grid;
-	--columns: 3;
-	@media (min-width: 700px) { --columns: 3; }
+	--columns: 2;
+	@media (min-width: 700px) { --columns: 2; }
 	li {
 		position: relative;
 		img {
 			position: relative;
 			margin-bottom: 10px;
+			background-color: #ffffff;
+			padding: 20px;
+			border-radius: 10px;
 		}
 		a {
 			color: $dark-gray;
@@ -575,17 +598,19 @@ aside {
 	}
 }
 
+.brand-asset-badges,
 .brand-asset-icons {
 	display: grid;
 	--columns: 3;
-	margin-top: 40px;
-	@media (min-width: 700px) { --columns: 5; }
+	margin-top: 20px;
+	@media (min-width: 700px) { --columns: 6; }
 	li {
 		position: relative;
 		img {
 			position: relative;
 			max-height: 100px;
 			margin-bottom: 10px;
+			border-radius: 10px;
 		}
 		a {
 			color: $dark-gray;
@@ -606,10 +631,15 @@ aside {
 	}
 }
 
+.brand-asset-badges {
+	--columns: 1;
+	@media (min-width: 700px) { --columns: 2; }
+}
+
 .brand-asset-colors {
 	display: grid;
 	--columns: 4;
-	margin-top: 40px;
+	margin-top: 20px;
 	@media (min-width: 700px) { --columns: 8; }
 	li {
 		position: relative;
@@ -664,6 +694,10 @@ aside {
 	li {
 		position: relative;
 		height: 100px;
+		text-align: center;
+		a {
+			text-decoration: none;
+		}
 		.material-icons {
 			font-size: 48px;
 			margin-bottom: 10px;
@@ -866,6 +900,9 @@ aside {
 	&.space {
 		margin-left: 8px;
 	}
+	&.private {
+		top: -4px;
+	}
 	&.free {
 		top: -4px;
 	}
@@ -937,6 +974,7 @@ button.styled,
 	color: $darkest-gray;
 	margin: 0.8em 0;
 	outline: none;
+	cursor: pointer;
 
 	max-width: 150px;
 
@@ -1016,18 +1054,42 @@ button.styled,
 	}
 }
 
+#technical-limits,
 #fair-usage,
 #terms,
 #privacy {
 	color: $light-gray;
 	line-height: 24px;
 	p {
-		margin: 40px 0;
+		margin: 40px auto 40px;
 	}
+	ul,
 	ol {
-		margin: 40px 0;
+		margin: 40px auto 40px;
 		li {
 			margin: 20px 0;
 		}
+	}
+}
+
+#fair-usage table,
+#technical-limits table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	max-width: 800px;
+	width: 100%;
+	margin: 40px auto 80px;
+	text-align: left;
+	th {
+		color: $darker-gray;
+	}
+	th,
+	td {
+		border-bottom: 1px solid $lighter-gray;
+		padding: 8px;
+	}
+	tr th:nth-child(2),
+	tr td:nth-child(2) {
+		text-align: right;
 	}
 }

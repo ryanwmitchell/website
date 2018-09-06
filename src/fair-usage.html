@@ -65,11 +65,43 @@
 	</div>
 	<main>
 		<section id="fair-usage">
-			<div class="wide border">
+			<div class="narrow">
 				<h2 class="margin-b-60"><b>Fair Usage Policy</b></h2>
 				<p>
-					<b>1. TK</b><br>
-					TK
+					This Fair Usage Policy is a key part of the agreement between you and RANGER Studio LLC (the managing entity of Directus Cloud), which regulates your use of the Directus Cloud service. If you do not agree with this Fair Usage Policy, do not use any of Directus Cloud services. The limits outlined below apply only to current plans. If the limits within your Enterprise Tier Service Agreement differ from those below, the Service Agreement supersedes.
+				</p>
+				<p>
+					<table>
+						<thead>
+							<tr><th>Metric</th><th>Max</th><th>Measure</th></tr>
+						</thead>
+						<tbody>
+							<tr><td>Total API Requests</td><td>2,000,000</td><td>per month</td></tr>
+							<tr><td>Total Asset Bandwidth</td><td>750,000</td><td>GB per month, per instance</td></tr>
+						</tbody>
+					</table>
+				</p>
+				<p>
+					The usage of API requests and the Asset bandwidth is measured on a calendar monthly basis. Usage is reset on the first day of each new period. For example, if you signed up on the 15th, your usage period is set to be from 15th to 14th of a calendar month.
+				</p>
+				<p>
+					Additional API requests will be billed at $10 per 1,000,000 API requests per month. Additional asset bandwidth consumption will be billed at $100 per 1TB per month. The fees are applied after the initial metrics above are exceeded. Directus Cloud does not impose a cap on additional API requests or asset bandwidth. Fair Usage limits can only be exceeded if your organization has a valid payment method on file.
+				</p>
+				<h3 class="margin-t-100"><b>Technical Limits Policy</b></h3>
+				<p>
+					To ensure the best possible experience for all Directus Cloud customers, we enforce <a href="technical-limits.html">technical limits</a>. If your Organization's usage exceeds the technical limits, we reserve the right to take corrective action, including but not limited to the throttling of API or suspending/terminating your account.
+				</p>
+				<h3 class="margin-t-100"><b>Free Tier Limits</b></h3>
+				<p>
+					The follow Fair Usage limits apply specifically to Free Tier instances:
+					<ul>
+						<li>Free Tier instances are free-of-charge, except for any overage fees incurred from the additional API requests and asset bandwidth described above.</li>
+						<li>Each organization is limited to one Free Tier instance.</li>
+						<li>Free Tier API requests may be aggresively cached at any time.</li>
+						<li>SLAs and premium support are not offered for Free Tier instances.</li>
+						<li>Free Tier instances must be manually renewed every 30 days or else they will be removed.</li>
+						<li>Directus Cloud reserves the right to discontinue offering the Free Tier at any time.</li>
+					</ul>
 				</p>
 			</div>
 		</section>
@@ -85,7 +117,7 @@
 					<p>Download the self-hosted version for free.</p>
 				</div>
 				<div class="buttons">
-					<a href="#">Download</a>
+					<a href="https://github.com/directus/directus/releases" target="_blank">Download</a>
 				</div>
 			</div>
 		</div>
@@ -95,7 +127,8 @@
 				<p>
 					© 2018 <a href="http://rangerstudio.com" target="_blank">RANGER Studio, LLC</a><br>
 					All rights reserved.<br>
-					Proudly made in NYC
+					Proudly made in NYC<br>
+					<a href="./legal.html">Legal</a>
 					<div class="social">
 						<a href="https://github.com/directus" target="_blank">
 							<svg xmlns="http://www.w3.org/2000/svg" width="40" height="39" viewBox="0 0 40 39">
@@ -162,5 +195,14 @@
 	// gtag("js", new Date());
 	// gtag("config", "UA-24637628-1");
 	</script>
+
+	<!-- Intercom -->
+	<script>
+		window.intercomSettings = {
+			app_id: "z4awf3lq"
+		};
+	</script>
+	<script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/z4awf3lq';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script>
+	<!-- End Intercom -->
 </body>
 </html>
