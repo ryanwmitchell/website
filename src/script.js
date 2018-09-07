@@ -25,6 +25,19 @@ $(document).ready(function(){
 	});
 
 	//////////////////////////////////////////////////////////////////////////////
+	// Responsive Menu
+
+	$('.menu').on("click", function(e) {
+		event.preventDefault();
+		$('#menu').addClass('active');
+	});
+
+	$('#menu .close').on("click", function(e) {
+		event.preventDefault();
+		$('#menu').removeClass('active');
+	});
+
+	//////////////////////////////////////////////////////////////////////////////
 	// Roadmap button
 
 	$('#show_roadmap').on("click", function(e) {

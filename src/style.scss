@@ -261,6 +261,13 @@ aside {
 		width: calc(33% - 40px);
 		max-width: 300px;
 		margin-top: 60px;
+		@media (max-width: $breakpoint-medium) {
+			width: calc(33% - 20px);
+		}
+		@media (max-width: $breakpoint-small) {
+			width: 100%;
+			max-width: 400px;
+		}
 		h4 {
 			margin-top: 15px;
 			margin-bottom: 20px;
@@ -569,7 +576,7 @@ aside {
 
 .brand-asset-logos {
 	display: grid;
-	--columns: 2;
+	--columns: 1;
 	@media (min-width: 700px) { --columns: 2; }
 	li {
 		position: relative;
@@ -733,6 +740,33 @@ aside {
 		}
 		&.next {
 			right: -80px;
+		}
+		@media (max-width: $breakpoint-large) {
+			padding: 10px;
+			&.prev {
+				left: -60px;
+			}
+			&.next {
+				right: -60px;
+			}
+		}
+		@media (max-width: $breakpoint-medium) {
+			padding: 0px;
+			&.prev {
+				left: -40px;
+			}
+			&.next {
+				right: -40px;
+			}
+		}
+		@media (max-width: $breakpoint-small) {
+			padding: 0px;
+			&.prev {
+				left: -20px;
+			}
+			&.next {
+				right: -20px;
+			}
 		}
 	}
 	.slick-dots {

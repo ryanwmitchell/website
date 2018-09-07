@@ -31,6 +31,7 @@
 		padding: 20px;
 		font-size: 36px;
 		transition: $medium $transition color;
+		z-index: 3;
 		&:hover {
 			color: $white;
 		}
@@ -39,6 +40,33 @@
 		}
 		&.next {
 			right: -80px;
+		}
+		@media (max-width: $breakpoint-large) {
+			padding: 10px;
+			&.prev {
+				left: -60px;
+			}
+			&.next {
+				right: -60px;
+			}
+		}
+		@media (max-width: $breakpoint-medium) {
+			padding: 0px;
+			&.prev {
+				left: -40px;
+			}
+			&.next {
+				right: -40px;
+			}
+		}
+		@media (max-width: $breakpoint-small) {
+			padding: 0px;
+			&.prev {
+				left: -20px;
+			}
+			&.next {
+				right: -20px;
+			}
 		}
 	}
 }
@@ -81,6 +109,18 @@
 			margin-bottom: 0;
 		}
 	}
+	@media (max-width: $breakpoint-medium) {
+		display: block;
+		.card {
+			width: 100%;
+			height: auto;
+			margin: 0 auto 40px;
+			&.recommended {
+				padding: 120px 20px 20px;
+				margin: 0 auto 40px;
+			}
+		}
+	}
 }
 
 .card {
@@ -98,7 +138,10 @@
 		margin: 0 10px;
 	}
 	@media (max-width: $breakpoint-medium) {
-
+		height: 240px;
+		p {
+			display: none;
+		}
 	}
 	@media (max-width: $breakpoint-small) {
 		margin: 0 5px;

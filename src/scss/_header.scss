@@ -1,3 +1,65 @@
+#menu {
+	transition: $slow $transition opacity;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: $darkest-gray;
+	color: $white;
+	text-align: center;
+	z-index: 4;
+	padding: 40px;
+	font-size: 28px;
+	font-weight: 300;
+	opacity: 0;
+	pointer-events: none;
+	&.active {
+		opacity: 1;
+		pointer-events: all;
+	}
+	.logo {
+		display: block;
+		margin-bottom: 20px;
+	}
+	a:not(.logo) {
+		transition: $slow $transition all;
+		display: block;
+		text-decoration: none;
+		&:hover {
+			color: $light-gray;
+		}
+	}
+	.user {
+		display: inline-block;
+		transition: $slow $transition all;
+		background-color: $darker-gray;
+		border-radius: 100%;
+		width: 41px;
+		height: 41px;
+		border: 2px solid $white;
+		color: $white;
+		cursor: pointer;
+		margin-top: 20px;
+		i {
+			margin-top: 5px;
+			margin-left: 3px;
+		}
+		&:hover {
+			color: $light-gray;
+		}
+	}
+	.close {
+		display: block;
+		transition: $slow $transition all;
+		cursor: pointer;
+		margin-top: 60px;
+		&:hover {
+			color: $light-gray;
+		}
+	}
+}
+
 nav.top {
 	position: relative;
 	transition: $slow $transition all;
@@ -61,7 +123,7 @@ nav.top {
 		background-color: $darker-gray;
 		border-radius: 100%;
 		width: 41px;
-		Height: 41px;
+		height: 41px;
 		border: 2px solid $white;
 		color: $gray;
 		cursor: pointer;
@@ -80,6 +142,33 @@ nav.top {
 		}
 		&:hover {
 			color: $white;
+		}
+	}
+	.menu {
+		transition: $medium $transition color;
+		position: relative;
+		float: right;
+		width: 40px;
+		height: 40px;
+		color: $white;
+		cursor: pointer;
+		margin-top: 8px;
+		text-align: right;
+		display: none;
+		&:hover {
+			color: $lighter-gray;
+		}
+		.material-icons {
+			font-size: 24px;
+		}
+	}
+	@media (max-width: $breakpoint-medium) {
+		a:not(.logo),
+		.user {
+			display: none;
+		}
+		.menu {
+			display: block;
 		}
 	}
 }
@@ -104,6 +193,9 @@ header {
 		height: 60px;
 		path {
 			fill: $lightest-gray;
+		}
+		@media (max-width: $breakpoint-medium) {
+			display: none;
 		}
 	}
 }

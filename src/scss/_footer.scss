@@ -8,6 +8,9 @@ footer {
 		path {
 			fill: $lightest-gray;
 		}
+		@media (max-width: $breakpoint-medium) {
+			display: none;
+		}
 	}
 	.cta {
 		padding-top: 60px;
