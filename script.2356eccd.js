@@ -98,7 +98,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   // Override the current require with this new one
   return newRequire;
-})({54:[function(require,module,exports) {
+})({53:[function(require,module,exports) {
 $(document).ready(function () {
 	//////////////////////////////////////////////////////////////////////////////
 	// Nav shrink
@@ -234,5 +234,5 @@ $(document).ready(function () {
 
 	//////////////////////////////////////////////////////////////////////////////
 });
-},{}]},{},[54], null)
+},{}]},{},[53], null)
 //# sourceMappingURL=/website/script.2356eccd.map
