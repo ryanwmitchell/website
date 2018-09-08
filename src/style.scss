@@ -571,6 +571,9 @@ aside {
 	li {
 		position: relative;
 		height: 100px;
+		&:hover {
+			cursor: default;
+		}
 		img {
 			position: absolute;
 			top: 50%;
