@@ -12,6 +12,7 @@
 		cursor: pointer;
 		&:hover {
 			// transform: translatey(-2px);
+			background-color: rgba(38,50,56,0.05);
 			&::after {
 				color: $dark-gray;
 				right: 18px;

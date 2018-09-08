@@ -4,8 +4,9 @@ footer {
 	color: $white;
 	.angle {
 		width: 100%;
-		height: 60px;
-		path {
+		height: 40px;
+		path,
+		polygon {
 			fill: $lightest-gray;
 		}
 		@media (max-width: $breakpoint-medium) {

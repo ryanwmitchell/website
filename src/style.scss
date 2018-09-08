@@ -257,17 +257,13 @@ aside {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-between;
+	@media (max-width: $breakpoint-small) {
+		justify-content: center;
+	}
 	& > div {
 		width: calc(33% - 40px);
 		max-width: 300px;
 		margin-top: 60px;
-		@media (max-width: $breakpoint-medium) {
-			width: calc(33% - 20px);
-		}
-		@media (max-width: $breakpoint-small) {
-			width: 100%;
-			max-width: 400px;
-		}
 		h4 {
 			margin-top: 15px;
 			margin-bottom: 20px;
@@ -275,6 +271,16 @@ aside {
 		p {
 			margin-bottom: 20px;
 			font-size: 0.875rem;
+		}
+		@media (max-width: $breakpoint-medium) {
+			width: calc(33% - 20px);
+		}
+		@media (max-width: $breakpoint-small) {
+			width: 100%;
+			max-width: 400px;
+			p {
+				font-size: 1.1rem;
+			}
 		}
 	}
 }

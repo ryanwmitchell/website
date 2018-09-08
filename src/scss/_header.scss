@@ -22,7 +22,7 @@
 		display: block;
 		margin-bottom: 20px;
 	}
-	a:not(.logo) {
+	a:not(.icon) {
 		transition: $slow $transition all;
 		display: block;
 		text-decoration: none;
@@ -30,23 +30,41 @@
 			color: $light-gray;
 		}
 	}
-	.user {
+	.cta {
 		display: inline-block;
 		transition: $slow $transition all;
 		background-color: $darker-gray;
 		border-radius: 100%;
 		width: 41px;
 		height: 41px;
-		border: 2px solid $white;
+		border: 2px solid $darker-gray;
 		color: $white;
 		cursor: pointer;
 		margin-top: 20px;
+		.octicon {
+			width: 27px;
+			height: 27px;
+			margin-top: 5px;
+			margin-left: 0px;
+			path {
+				transition: $medium $transition all;
+				fill: $gray;
+			}
+		}
 		i {
 			margin-top: 5px;
-			margin-left: 3px;
+			margin-left: 7px;
 		}
 		&:hover {
-			color: $light-gray;
+			color: $white;
+			.octicon {
+				path {
+					fill: $white;
+				}
+			}
+			&::after {
+				opacity: 1;
+			}
 		}
 	}
 	.close {
@@ -116,7 +134,7 @@ nav.top {
 			margin-right: 60px;
 		}
 	}
-	.user {
+	.cta {
 		transition: $medium $transition color;
 		position: relative;
 		float: right;
@@ -124,17 +142,38 @@ nav.top {
 		border-radius: 100%;
 		width: 41px;
 		height: 41px;
-		border: 2px solid $white;
+		border: 2px solid $darker-gray;
 		color: $gray;
 		cursor: pointer;
+		// &::after {
+		// 	content: "more_vert";
+		// 	font-family: "Material Icons";
+		// 	font-size: 24px;
+		// 	position: absolute;
+		// 	top: 3px;
+		// 	right: -24px;
+		// 	color: $white;
+		// }
 		&::after {
-			content: "more_vert";
-			font-family: "Material Icons";
-			font-size: 24px;
+			transition: $medium $transition all;
+			content: "GitHub";
+			// font-family: "Material Icons";
+			// font-size: 24px;
 			position: absolute;
-			top: 3px;
-			right: -24px;
-			color: $white;
+			top: 8px;
+			right: 45px;
+			color: $light-gray;
+			// opacity: 0;
+		}
+		.octicon {
+			width: 27px;
+			height: 27px;
+			margin-top: 5px;
+			margin-left: 5px;
+			path {
+				transition: $medium $transition all;
+				fill: $gray;
+			}
 		}
 		i {
 			margin-top: 5px;
@@ -142,6 +181,15 @@ nav.top {
 		}
 		&:hover {
 			color: $white;
+			.octicon {
+				path {
+					fill: $white;
+				}
+			}
+			&::after {
+				color: $white;
+				// opacity: 1;
+			}
 		}
 	}
 	.menu {
@@ -164,7 +212,7 @@ nav.top {
 	}
 	@media (max-width: $breakpoint-medium) {
 		a:not(.logo),
-		.user {
+		.cta {
 			display: none;
 		}
 		.menu {
@@ -190,8 +238,9 @@ header {
 	}
 	.angle {
 		width: 100%;
-		height: 60px;
-		path {
+		height: 40px;
+		path,
+		polygon {
 			fill: $lightest-gray;
 		}
 		@media (max-width: $breakpoint-medium) {

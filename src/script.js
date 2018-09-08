@@ -61,7 +61,7 @@ $(document).ready(function(){
 
 	$('.testimonials').slick({
 		autoplay: true,
-		autoplaySpeed: 5000,
+		autoplaySpeed: 8000,
 		// adaptiveHeight: true,
 		dots: true,
 		prevArrow: '<i class="material-icons prev arrow">arrow_back</i>',
