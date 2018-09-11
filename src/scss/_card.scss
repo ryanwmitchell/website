@@ -145,6 +145,11 @@
 	}
 	@media (max-width: $breakpoint-small) {
 		margin: 0 5px;
+		max-width: 600px;
+		height: auto;
+		p {
+			display: block;
+		}
 	}
 	.header {
 		position: absolute;

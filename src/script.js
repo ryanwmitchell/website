@@ -57,6 +57,14 @@ $(document).ready(function(){
 	});
 
 	//////////////////////////////////////////////////////////////////////////////
+	// Open Chat
+
+	$('.open-chat').on('click', function (event) {
+		event.preventDefault();
+		Intercom('show');
+	});
+
+	//////////////////////////////////////////////////////////////////////////////
 	// Instantiate slideshows
 
 	$('.testimonials').slick({
@@ -75,7 +83,15 @@ $(document).ready(function(){
 		centerPadding: '50px',
 		slidesToShow: 3,
 		prevArrow: '<i class="material-icons prev arrow">arrow_back</i>',
-		nextArrow: '<i class="material-icons next arrow">arrow_forward</i>'
+		nextArrow: '<i class="material-icons next arrow">arrow_forward</i>',
+		responsive: [
+			{
+				breakpoint: 600,
+				settings: {
+					slidesToShow: 1
+				}
+			}
+		]
 	});
 
 	//////////////////////////////////////////////////////////////////////////////

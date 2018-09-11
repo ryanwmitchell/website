@@ -77,11 +77,16 @@ footer {
 				padding: 30px 60px 140px;
 			}
 			@media (max-width: $breakpoint-small) {
-				padding: 30px 20px 140px;
+				padding: 30px 20px 180px;
 				--columns: 2;
 				flex-wrap: wrap;
 				ul {
 					min-width: calc(50% - 30px);
+				}
+				.logo {
+					svg {
+						margin-bottom: 40px;
+					}
 				}
 			}
 		}
