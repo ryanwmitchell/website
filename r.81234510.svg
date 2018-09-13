@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400px" height="400px" viewBox="0 0 400 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>Logo</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Logo" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <polygon id="Fill-29" fill="#333333" points="0 400 400 400 400 0 0 0"></polygon>
+        <path d="M243.576627,147.725 C243.576627,140.275 236.411617,133.33 229.246606,133.33 L167.323303,133.33 L167.323303,180.95 L228.986424,180.95 C236.411617,180.95 243.576627,176.865 243.576627,169.435 L243.576627,147.725 Z M240.969804,300 L215.537019,219.055 L167.323303,219.055 L167.323303,300 L134,300 L134,100 L228.986424,100 C255.56501,100 276.934955,121.445 276.934955,147.725 L276.934955,169.435 C276.934955,188.29 265.536984,204.29 249.80098,211.72 L277,300 L240.969804,300 Z" id="Fill-30" fill="#FFFFFF"></path>
+    </g>
+</svg>
