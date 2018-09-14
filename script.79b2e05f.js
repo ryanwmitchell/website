@@ -98,7 +98,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   // Override the current require with this new one
   return newRequire;
-})({2:[function(require,module,exports) {
+})({56:[function(require,module,exports) {
 $(document).ready(function () {
 	//////////////////////////////////////////////////////////////////////////////
 	// Nav shrink
@@ -158,11 +158,19 @@ $(document).ready(function () {
 	});
 
 	//////////////////////////////////////////////////////////////////////////////
+	// Open Chat
+
+	$('.open-chat').on('click', function (event) {
+		event.preventDefault();
+		Intercom('show');
+	});
+
+	//////////////////////////////////////////////////////////////////////////////
 	// Instantiate slideshows
 
 	$('.testimonials').slick({
 		autoplay: true,
-		autoplaySpeed: 5000,
+		autoplaySpeed: 8000,
 		// adaptiveHeight: true,
 		dots: true,
 		prevArrow: '<i class="material-icons prev arrow">arrow_back</i>',
@@ -176,7 +184,13 @@ $(document).ready(function () {
 		centerPadding: '50px',
 		slidesToShow: 3,
 		prevArrow: '<i class="material-icons prev arrow">arrow_back</i>',
-		nextArrow: '<i class="material-icons next arrow">arrow_forward</i>'
+		nextArrow: '<i class="material-icons next arrow">arrow_forward</i>',
+		responsive: [{
+			breakpoint: 600,
+			settings: {
+				slidesToShow: 1
+			}
+		}]
 	});
 
 	//////////////////////////////////////////////////////////////////////////////
@@ -234,7 +248,7 @@ $(document).ready(function () {
 
 	//////////////////////////////////////////////////////////////////////////////
 });
-},{}],76:[function(require,module,exports) {
+},{}],465:[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -263,7 +277,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '49304' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '60423' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -404,5 +418,5 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}]},{},[76,2], null)
+},{}]},{},[465,56], null)
 //# sourceMappingURL=/script.79b2e05f.map

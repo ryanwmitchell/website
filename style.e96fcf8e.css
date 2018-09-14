@@ -940,28 +940,40 @@ body {
   #menu .logo {
     display: block;
     margin-bottom: 20px; }
-  #menu a:not(.logo) {
+  #menu a:not(.icon) {
     transition: 300ms cubic-bezier(0.4, 0, 0.2, 1) all;
     display: block;
     text-decoration: none; }
-    #menu a:not(.logo):hover {
+    #menu a:not(.icon):hover {
       color: #90a4ae; }
-  #menu .user {
+  #menu .cta {
     display: inline-block;
     transition: 300ms cubic-bezier(0.4, 0, 0.2, 1) all;
     background-color: #37474f;
     border-radius: 100%;
     width: 41px;
     height: 41px;
-    border: 2px solid #fff;
+    border: 2px solid #37474f;
     color: #fff;
     cursor: pointer;
     margin-top: 20px; }
-    #menu .user i {
+    #menu .cta .octicon {
+      width: 27px;
+      height: 27px;
       margin-top: 5px;
-      margin-left: 3px; }
-    #menu .user:hover {
-      color: #90a4ae; }
+      margin-left: 0px; }
+      #menu .cta .octicon path {
+        transition: 200ms cubic-bezier(0.4, 0, 0.2, 1) all;
+        fill: #78909c; }
+    #menu .cta i {
+      margin-top: 5px;
+      margin-left: 7px; }
+    #menu .cta:hover {
+      color: #fff; }
+      #menu .cta:hover .octicon path {
+        fill: #fff; }
+      #menu .cta:hover::after {
+        opacity: 1; }
   #menu .close {
     display: block;
     transition: 300ms cubic-bezier(0.4, 0, 0.2, 1) all;
@@ -1017,7 +1029,11 @@ nav.top {
       color: #fff; }
     nav.top a:first-of-type {
       margin-right: 60px; }
-  nav.top .user {
+  nav.top .cta-link {
+    position: relative;
+    float: right;
+    margin-right: 0; }
+  nav.top .cta {
     transition: 200ms cubic-bezier(0.4, 0, 0.2, 1) color;
     position: relative;
     float: right;
@@ -1025,22 +1041,34 @@ nav.top {
     border-radius: 100%;
     width: 41px;
     height: 41px;
-    border: 2px solid #fff;
+    border: 2px solid #37474f;
     color: #78909c;
     cursor: pointer; }
-    nav.top .user::after {
-      content: "more_vert";
-      font-family: "Material Icons";
-      font-size: 24px;
+    nav.top .cta::after {
+      transition: 200ms cubic-bezier(0.4, 0, 0.2, 1) all;
+      content: "GitHub";
       position: absolute;
-      top: 3px;
-      right: -24px;
-      color: #fff; }
-    nav.top .user i {
+      top: 8px;
+      right: 38px;
+      padding-right: 12px;
+      color: #90a4ae; }
+    nav.top .cta .octicon {
+      width: 27px;
+      height: 27px;
+      margin-top: 5px;
+      margin-left: 5px; }
+      nav.top .cta .octicon path {
+        transition: 200ms cubic-bezier(0.4, 0, 0.2, 1) all;
+        fill: #78909c; }
+    nav.top .cta i {
       margin-top: 5px;
       margin-left: 7px; }
-    nav.top .user:hover {
+    nav.top .cta:hover {
       color: #fff; }
+      nav.top .cta:hover .octicon path {
+        fill: #fff; }
+      nav.top .cta:hover::after {
+        color: #fff; }
   nav.top .menu {
     transition: 200ms cubic-bezier(0.4, 0, 0.2, 1) color;
     position: relative;
@@ -1058,7 +1086,7 @@ nav.top {
       font-size: 24px; }
   @media (max-width: 800px) {
     nav.top a:not(.logo),
-    nav.top .user {
+    nav.top .cta {
       display: none; }
     nav.top .menu {
       display: block; } }
@@ -1077,8 +1105,9 @@ header {
       padding-top: 40px; }
   header .angle {
     width: 100%;
-    height: 60px; }
-    header .angle path {
+    height: 40px; }
+    header .angle path,
+    header .angle polygon {
       fill: #eceff1; }
     @media (max-width: 800px) {
       header .angle {
@@ -1117,8 +1146,9 @@ footer {
   color: #fff; }
   footer .angle {
     width: 100%;
-    height: 60px; }
-    footer .angle path {
+    height: 40px; }
+    footer .angle path,
+    footer .angle polygon {
       fill: #eceff1; }
     @media (max-width: 800px) {
       footer .angle {
@@ -1173,11 +1203,13 @@ footer {
         padding: 30px 60px 140px; } }
     @media (max-width: 600px) {
       footer nav.wide {
-        padding: 30px 20px 140px;
+        padding: 30px 20px 180px;
         --columns: 2;
         flex-wrap: wrap; }
         footer nav.wide ul {
-          min-width: calc(50% - 30px); } }
+          min-width: calc(50% - 30px); }
+        footer nav.wide .logo svg {
+          margin-bottom: 40px; } }
   footer nav .left {
     flex-grow: 1.6;
     flex-basis: 0; }
@@ -1348,7 +1380,11 @@ footer {
         display: none; } }
   @media (max-width: 600px) {
     .card {
-      margin: 0 5px; } }
+      margin: 0 5px;
+      max-width: 600px;
+      height: auto; }
+      .card p {
+        display: block; } }
   .card .header {
     position: absolute;
     top: 0;
@@ -1392,9 +1428,11 @@ footer {
     padding: 30px 30px 30px 60px;
     margin-bottom: 10px;
     cursor: pointer; }
-    .requests li:hover::after {
-      color: #546e7a;
-      right: 18px; }
+    .requests li:hover {
+      background-color: rgba(38, 50, 56, 0.05); }
+      .requests li:hover::after {
+        color: #546e7a;
+        right: 18px; }
     .requests li::after {
       transition: 200ms cubic-bezier(0.4, 0, 0.2, 1) all;
       content: "arrow_forward";
@@ -1534,6 +1572,9 @@ section.invert {
   width: 100%;
   max-width: 1160px;
   padding: 80px; }
+  .narrow.short,
+  .wide.short {
+    padding: 40px; }
   .narrow > img,
   .wide > img {
     max-width: 100%; }
@@ -1671,11 +1712,13 @@ aside {
 
 .icon-details {
   vertical-align: middle;
-  color: #90a4ae; }
+  color: #90a4ae;
+  height: 40px; }
   .icon-details svg {
     display: inline-block;
     vertical-align: middle;
-    margin-right: 10px; }
+    margin-right: 10px;
+    height: 40px; }
 
 .two-up {
   display: flex;
@@ -1712,23 +1755,28 @@ aside {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between; }
+  @media (max-width: 600px) {
+    .three-up {
+      justify-content: center; } }
   .three-up > div {
     width: calc(33% - 40px);
     max-width: 300px;
     margin-top: 60px; }
-    @media (max-width: 800px) {
-      .three-up > div {
-        width: calc(33% - 20px); } }
-    @media (max-width: 600px) {
-      .three-up > div {
-        width: 100%;
-        max-width: 400px; } }
     .three-up > div h4 {
       margin-top: 15px;
       margin-bottom: 20px; }
     .three-up > div p {
       margin-bottom: 20px;
       font-size: 0.875rem; }
+    @media (max-width: 800px) {
+      .three-up > div {
+        width: calc(33% - 20px); } }
+    @media (max-width: 600px) {
+      .three-up > div {
+        width: 100%;
+        max-width: 400px; }
+        .three-up > div p {
+          font-size: 1.1rem; } }
 
 @-webkit-keyframes float-3 {
   0% {
@@ -1912,32 +1960,34 @@ aside {
     color: #90a4ae; }
   .connections div {
     display: inline-block;
-    border: 1px solid #cfd8dc;
+    border: 1px solid #039be5;
     padding: 6px 16px;
     margin-top: 20px;
     cursor: pointer;
     margin-left: -1px;
-    color: #78909c; }
+    color: #039be5; }
     .connections div:first-of-type {
       border-radius: 30px 0 0 30px; }
     .connections div:last-of-type {
       border-radius: 0 30px 30px 0; }
     .connections div:hover {
-      color: #263238; }
+      background-color: rgba(3, 155, 229, 0.1); }
     .connections div.active {
-      color: #263238;
-      background-color: #cfd8dc; }
+      color: #fff;
+      background-color: #039be5; }
 
 .connection_output {
   display: none;
-  margin: 100px auto;
+  margin: 100px auto 0;
   max-width: 700px;
   text-align: center;
-  color: #263238; }
+  color: #263238;
+  min-height: 270px; }
   .connection_output.active {
     display: grid; }
   .connection_output p {
-    font-size: 1.125rem; }
+    font-size: 1.125rem;
+    color: #546e7a; }
 
 .brand-asset-badges,
 .brand-asset-colors,
@@ -2013,6 +2063,7 @@ aside {
     flex-basis: 7em;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     justify-content: space-between;
     margin: 1em 0 2em 0;
     color: #cfd8dc;
@@ -2114,13 +2165,15 @@ aside {
   display: grid;
   max-width: 1000px;
   margin-top: 0; }
+  .features.margin-t {
+    margin-top: 80px; }
   .features li {
     color: #78909c; }
     .features li:hover {
       cursor: default; }
   @media (min-width: 560px) {
     .features {
-      --columns: 4; } }
+      --columns: 3; } }
   @media (min-width: 700px) {
     .features {
       --columns: 5; } }
@@ -2138,6 +2191,8 @@ aside {
   .brands li {
     position: relative;
     height: 100px; }
+    .brands li:hover {
+      cursor: default; }
     .brands li img {
       position: absolute;
       top: 50%;
@@ -2523,6 +2578,11 @@ button.styled,
   .buttons button:not(:last-child),
   .buttons a:not(:last-child) {
     margin-right: 10px; }
+  button.styled.big,
+  .buttons button.big,
+  .buttons a.big {
+    padding: 1.8em;
+    max-width: 240px; }
   button.styled.ghost,
   .buttons button.ghost,
   .buttons a.ghost {
@@ -2632,3 +2692,7 @@ button.styled,
   #technical-limits table tr th:nth-child(2),
   #technical-limits table tr td:nth-child(2) {
     text-align: right; }
+
+.office-image {
+  background-image: url("brooklyn-office.479a7297.jpg");
+  background-size: cover; }

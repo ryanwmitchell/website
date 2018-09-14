@@ -98,7 +98,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   // Override the current require with this new one
   return newRequire;
-})({75:[function(require,module,exports) {
+})({419:[function(require,module,exports) {
 var bundleURL = null;
 function getBundleURLCached() {
   if (!bundleURL) {
@@ -128,7 +128,7 @@ function getBaseURL(url) {
 
 exports.getBundleURL = getBundleURLCached;
 exports.getBaseURL = getBaseURL;
-},{}],74:[function(require,module,exports) {
+},{}],418:[function(require,module,exports) {
 var bundle = require('./bundle-url');
 
 function updateLink(link) {
@@ -159,13 +159,13 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":75}],3:[function(require,module,exports) {
+},{"./bundle-url":419}],57:[function(require,module,exports) {
 
         var reloadCSS = require('_css_loader');
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
-},{"./fonts/roboto-light.woff2":67,"./fonts/roboto-light.woff":68,"./fonts/roboto-regular.woff2":69,"./fonts/roboto-regular.woff":70,"./fonts/roboto-bold.woff2":71,"./fonts/roboto-bold.woff":72,"./../node_modules/normalize.css/normalize.css":73,"_css_loader":74}],76:[function(require,module,exports) {
+},{"./fonts/roboto-light.woff2":411,"./fonts/roboto-light.woff":412,"./fonts/roboto-regular.woff2":413,"./fonts/roboto-regular.woff":414,"./fonts/roboto-bold.woff2":415,"./fonts/roboto-bold.woff":416,"./../node_modules/normalize.css/normalize.css":417,"./img/brooklyn-office.jpg":460,"_css_loader":418}],495:[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 
@@ -194,7 +194,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = '' || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + '49304' + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + '60423' + '/');
   ws.onmessage = function (event) {
     var data = JSON.parse(event.data);
 
@@ -335,7 +335,7 @@ function hmrAccept(bundle, id) {
     return hmrAccept(global.parcelRequire, id);
   });
 }
-},{}],78:[function(require,module,exports) {
+},{}],496:[function(require,module,exports) {
 var getBundleURL = require('./bundle-url').getBundleURL;
 
 function loadBundlesLazy(bundles) {
@@ -416,7 +416,7 @@ LazyPromise.prototype.catch = function (onError) {
   if (this.promise === null) this.promise = new Promise(this.executor);
   return this.promise.catch(onError);
 };
-},{"./bundle-url":75}],79:[function(require,module,exports) {
+},{"./bundle-url":419}],497:[function(require,module,exports) {
 module.exports = function loadCSSBundle(bundle) {
   return new Promise(function (resolve, reject) {
     var link = document.createElement('link');
@@ -436,5 +436,5 @@ module.exports = function loadCSSBundle(bundle) {
   });
 };
 },{}],0:[function(require,module,exports) {
-var b=require(78);b.register("css",require(79));b.load([["roboto-light.9af2de0b.woff2",67],["roboto-light.ce3893fb.woff",68],["roboto-regular.3818360b.woff2",69],["roboto-regular.d20dbcca.woff",70],["roboto-bold.553a6687.woff2",71],["roboto-bold.a1599cc1.woff",72],["normalize.0c93710b.css",73]]);
-},{}]},{},[76,0], null)
+var b=require(496);b.register("css",require(497));b.load([["roboto-light.9af2de0b.woff2",411],["roboto-light.ce3893fb.woff",412],["roboto-regular.3818360b.woff2",413],["roboto-regular.d20dbcca.woff",414],["roboto-bold.553a6687.woff2",415],["roboto-bold.a1599cc1.woff",416],["normalize.0c93710b.css",417],["brooklyn-office.479a7297.jpg",460]]);
+},{}]},{},[495,0], null)
