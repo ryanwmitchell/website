@@ -67,11 +67,11 @@
 			<a href="./services.html">Services</a>
 			<a href="./resources.html">Resources</a>
 			<a href="./organization.html">Organization</a>
-			<div class="cta icon">
-				<a href="https://github.com/directus" target="_blank">
-					<svg height="32" class="octicon" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z" fill="#FFF"></path></svg>
-				</a>
-			</div>
+			<a href="https://github.com/directus" target="_blank" class="cta-link">
+				<div class="cta icon">
+						<svg height="32" class="octicon" viewBox="0 0 16 16" version="1.1" width="32" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z" fill="#FFF"></path></svg>
+				</div>
+			</a>
 			<div class="menu"><i class="material-icons">menu</i></div>
 		</div>
 	</nav>
@@ -125,6 +125,28 @@
 						<a href="#" class="blue internal">Explore our App Docs</a>
 					</div>
 				</div>
+				<ul class="features margin-t">
+					<li>
+						<i class="material-icons">style</i>
+						Themeable
+					</li>
+					<li>
+						<i class="material-icons">devices</i>
+						Responsive
+					</li>
+					<li>
+						<i class="material-icons">bookmarks</i>
+						Bookmarking
+					</li>
+					<li>
+						<i class="material-icons">low_priority</i>
+						Drag &amp; Drop
+					</li>
+					<li>
+						<i class="material-icons">extension</i>
+						Fully Extensible
+					</li>
+				</ul>
 			</div>
 		</section>
 		<section id="directus-api">
@@ -150,8 +172,8 @@
 						<a href="#" class="blue internal">Learn More</a>
 					</div>
 					<div>
-						<h4>Roles &amp; Permissions</h4>
-						<p>CRUD support, user/role scoping, field-level read/write permissions, IP whitelisting, update explanation enforcement, allowed statuses, and fully-customizable authoring workflows.</p>
+						<h4>Event &amp; Web Hooks</h4>
+						<p>From user logins to item updates, every event in Directus has hooks for triggering custom code. Take things even further with web-hooks and post custom HTTP event callbacks.</p>
 						<a href="#" class="blue internal">Learn More</a>
 					</div>
 					<div>
@@ -160,6 +182,28 @@
 						<a href="#" class="blue internal">Explore our API Docs</a>
 					</div>
 				</div>
+				<ul class="features margin-t">
+					<li>
+						<i class="material-icons">filter_list</i>
+						Advanced Filtering
+					</li>
+					<li>
+						<i class="material-icons">photo_size_select_large</i>
+						Thumbnailer
+					</li>
+					<li>
+						<i class="material-icons">visibility_off</i>
+						Granular Permissions
+					</li>
+					<li>
+						<i class="material-icons">storage</i>
+						Storage Adapters
+					</li>
+					<li>
+						<i class="material-icons">toll</i>
+						Static &amp; Temp Tokens
+					</li>
+				</ul>
 			</div>
 		</section>
 		<section id="directus-sdks">
@@ -353,7 +397,7 @@
 			</div>
 		</section>
 		<section id="tools">
-			<div class="wide">
+			<div class="wide border">
 				<h2><b>Other free goodies.</b> Many components of Directus 7 are also useful standalone modules. We’ve made these libraries available in case you’d like to use them individually.</h2>
 				<div class="two-up">
 					<div>
@@ -379,6 +423,15 @@
 						<h3>Static Site Generator</h3>
 						<p>An old tool for generating static sites from templates that directly reference database content. It hasn't been maintained in a while, but we will be updating it to work with v7 soon.</p>
 						<a href="https://github.com/directus/static-generator" class="blue internal" target="_blank">Download on GitHub</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section>
+			<div class="wide short">
+				<div class="center">
+					<div class="buttons center">
+						<a href="./services.html" class="dark big">Next: Services</a>
 					</div>
 				</div>
 			</div>

@@ -134,6 +134,11 @@ nav.top {
 			margin-right: 60px;
 		}
 	}
+	.cta-link {
+		position: relative;
+		float: right;
+		margin-right: 0;
+	}
 	.cta {
 		transition: $medium $transition color;
 		position: relative;
@@ -161,7 +166,8 @@ nav.top {
 			// font-size: 24px;
 			position: absolute;
 			top: 8px;
-			right: 45px;
+			right: 38px;
+			padding-right: 12px;
 			color: $light-gray;
 			// opacity: 0;
 		}

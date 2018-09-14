@@ -42,6 +42,10 @@ section {
 	max-width: 1160px;
 	padding: 80px;
 
+	&.short {
+	padding: 40px;
+	}
+
 	&> img {
 		max-width: 100%;
 	}
@@ -210,10 +214,12 @@ aside {
 .icon-details {
 	vertical-align: middle;
 	color: $light-gray;
+	height: 40px;
 	svg {
 		display: inline-block;
 		vertical-align: middle;
 		margin-right: 10px;
+		height: 40px;
 	}
 }
 
@@ -432,12 +438,12 @@ aside {
 	}
 	div {
 		display: inline-block;
-		border: 1px solid $lighter-gray;
+		border: 1px solid $accent;
 		padding: 6px 16px;
 		margin-top: 20px;
 		cursor: pointer;
 		margin-left: -1px;
-		color: $gray;
+		color: $accent;
 		&:first-of-type {
 			border-radius: 30px 0 0 30px;
 		}
@@ -445,24 +451,26 @@ aside {
 			border-radius: 0 30px 30px 0;
 		}
 		&:hover {
-			color: $darkest-gray;
+			background-color: rgba($accent, 0.1);
 		}
 		&.active {
-			color: $darkest-gray;
-			background-color: $lighter-gray;
+			color: $white;
+			background-color: $accent;
 		}
 	}
 }
 
 .connection_output {
 	display: none;
-	margin: 100px auto;
+	margin: 100px auto 0;
 	max-width: 700px;
 	text-align: center;
 	color: $darkest-gray;
+	min-height: 270px;
 	&.active {display: grid;}
 	p {
 		font-size: 1.125rem;
+		color: $dark-gray;
 	}
 }
 
@@ -501,6 +509,7 @@ aside {
 		flex-basis: 7em;
 		flex-direction: column;
 		align-items: center;
+		text-align: center;
 		justify-content: space-between;
 		margin: 1em 0 2em 0;
 		color: $lighter-gray;
@@ -547,6 +556,10 @@ aside {
 	display: grid;
 	max-width: 1000px;
 	margin-top: 0;
+
+	&.margin-t {
+		margin-top: 80px;
+	}
 	li {
 		color: $gray;
 		&:hover {
@@ -554,7 +567,7 @@ aside {
 		}
 	}
 
-	@media (min-width: 560px) { --columns: 4; }
+	@media (min-width: 560px) { --columns: 3; }
 
 	@media (min-width: 700px) { --columns: 5; }
 	.material-icons {
@@ -1031,6 +1044,11 @@ button.styled,
 
 	&:not(:last-child) {
 		margin-right: 10px;
+	}
+
+	&.big {
+		padding: 1.8em;
+		max-width: 240px;
 	}
 
 	&.ghost {
