@@ -2,6 +2,9 @@
 	list-style: none;
 	padding: 0;
 	margin-top: 80px;
+	a {
+		text-decoration: none;
+	}
 	li {
 		transition: $medium $transition all;
 		position: relative;
