@@ -1,5 +1,5 @@
 import Plyr from "plyr";
-import "plyr/dist/plyr.css";
+// import "plyr/dist/plyr.css";
 
 var player = new Plyr("#player", {
   controls: ["play-large", "play", "progress", "mute", "airplay", "fullscreen"]
