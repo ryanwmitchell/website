@@ -1,4 +1,59 @@
+import Plyr from "plyr";
+import "plyr/dist/plyr.css";
+
+var player = new Plyr("#player", {
+  controls: ["play-large", "play", "progress", "mute", "airplay", "fullscreen"]
+});
+
+/**
+ * Google Analytics fires this on outgoing links
+ */
+// window.trackOutboundLink = function(url) {
+//   gtag("event", "click", {
+//     event_category: "outbound",
+//     event_label: url,
+//     transport_type: "beacon",
+//     event_callback: function() {
+//       window.open(url, "_blank");
+//     }
+//   });
+// };
+
+// function getQueryVariable(variable) {
+//   const url = window.location.href;
+//   variable = variable.replace(/[\[\]]/g, "\\$&");
+//   const regex = new RegExp("[?&]" + variable + "(=([^&#]*)|&|#|$)"),
+//     results = regex.exec(url);
+//   if (!results) return null;
+//   if (!results[2]) return "";
+//   return decodeURIComponent(results[2].replace(/\+/g, " "));
+// }
+
+//////////////////////////////////////////////////////////////////////////////
+
 $(document).ready(function(){
+	//////////////////////////////////////////////////////////////////////////////
+	// Video Modal
+
+	$('.open-video').on("click", function(e) {
+		event.preventDefault();
+		$('#video').addClass('active');
+		player.play();
+	});
+
+	$('.close-video').on("click", function(e) {
+		event.preventDefault();
+		player.pause();
+		$('#video').removeClass('active');
+	});
+
+	$(document).keyup(function(e) {
+		if (e.key === "Escape") { // `27`
+			player.pause();
+			$('#video').removeClass('active');
+		}
+	});
+
 	//////////////////////////////////////////////////////////////////////////////
 	// Nav shrink
 
