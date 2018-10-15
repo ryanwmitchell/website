@@ -213,6 +213,14 @@ aside {
 	}
 }
 
+.creds {
+	color: $lighter-gray;
+	margin-top: 10px;
+	code {
+		color: $light-gray;
+	}
+}
+
 .icon-details {
 	vertical-align: middle;
 	color: $light-gray;
