@@ -62,16 +62,16 @@ $(document).ready(function(){
 	$(document).on('scroll', function(){
 		var winTop = $(window).scrollTop();
 
-		if(winTop > 200) {
+		if(winTop > 100) {
 			$('nav.top').addClass('short');
 		} else if(winTop < 80) {
 			$('nav.top').removeClass('short');
 		}
 
-		scrollingDown = (winTop > lastScroll)? true : false; // winTop > 300 &&
+		scrollingDown = (winTop > lastScroll && winTop > 0)? true : false; // winTop > 300 &&
 		lastScroll = winTop;
 
-		if(scrollingDown){
+		if(scrollingDown && winTop > 100){
 			$('nav.top, .subheader').addClass('hide');
 		} else {
 			$('nav.top, .subheader').removeClass('hide');
