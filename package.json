@@ -6,7 +6,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "parcel src/index.html",
-    "build": "parcel build src/index.html --no-minify --public-url /"
+    "build": "npm run build:site && npm run build:assets",
+    "build:site": "parcel build src/index.html --no-minify --public-url /",
+    "build:assets": "parcel build src/assets/**/*.* -d ./dist/assets"
   },
   "repository": "directus/website",
   "author": "Ben Haynes <ben@rngr.org>",
