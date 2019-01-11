@@ -134,6 +134,12 @@ nav.top {
 		&:first-of-type {
 			margin-right: 60px;
 		}
+		@media (max-width: $breakpoint-large) {
+			margin-right: 30px;
+			&:first-of-type {
+				margin-right: 40px;
+			}
+		}
 	}
 	.cta-link {
 		position: relative;
