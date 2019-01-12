@@ -734,6 +734,31 @@ aside {
 		position: relative;
 		height: 100px;
 		text-align: center;
+		&.livechat_button a {
+			padding-top: 64px;
+			color: $light-gray;
+			&::before {
+				content: "Live Chat";
+				padding: 0;
+				text-align: center;
+				color: $darkest-gray;
+				font-weight: bold;
+				display: block;
+				margin-bottom: 5px;
+			}
+			&::after {
+				content: "question_answer";
+				font-family: "Material Icons";
+				font-size: 48px;
+				color: $gray;
+				line-height: 20px;
+				display: block;
+				position: absolute;
+				top: 14px;
+				left: 50%;
+				margin-left: -24px;
+			}
+		}
 		a {
 			text-decoration: none;
 		}
