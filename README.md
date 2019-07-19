@@ -23,11 +23,6 @@
 
 > _The Directus 7 App has been rebuilt from the ground-up in Vue.js and decoupled from our new "versionless" API. Both can easily be customized and extended to suit your project's needs._
 
-
-<p align="center">
-  <img src="https://semaphoreci.com/api/v1/directus/app/branches/build/badge.svg">
-</p>
-
 <p>&nbsp;</p>
 
 ## 🐰 Directus Website
