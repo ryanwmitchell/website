@@ -23,6 +23,11 @@
 
 > _The Directus 7 App has been rebuilt from the ground-up in Vue.js and decoupled from our new "versionless" API. Both can easily be customized and extended to suit your project's needs._
 
+
+<p align="center">
+  [![Netlify Status](https://api.netlify.com/api/v1/badges/d3cbcad9-3508-446a-a95a-d7183a26e462/deploy-status)](https://app.netlify.com/sites/directus-website/deploys)
+</p>
+
 <p>&nbsp;</p>
 
 ## 🐰 Directus Website
