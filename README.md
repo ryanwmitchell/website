@@ -25,7 +25,7 @@
 
 
 <p align="center">
-  [![Netlify Status](https://api.netlify.com/api/v1/badges/d3cbcad9-3508-446a-a95a-d7183a26e462/deploy-status)](https://app.netlify.com/sites/directus-website/deploys)
+  <a href="https://app.netlify.com/sites/directus-website/deploys"><img src="https://api.netlify.com/api/v1/badges/d3cbcad9-3508-446a-a95a-d7183a26e462/deploy-status"></a>
 </p>
 
 <p>&nbsp;</p>
