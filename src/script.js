@@ -155,34 +155,27 @@ $(document).ready(function(){
 		$('.connections div').removeClass('active');
 		$(this).addClass('active');
 
-		if($(this).text() == "SDK"){
+		if($(this).data('type') == "api"){
 			$('.connection_output').removeClass('active');
-			$('.connection_output.sdks').addClass('active');
-			$('.layers #app span').text("Your App" + $('ul.sdks li.active').data('language'));
+			$('.connection_output.devices').addClass('active');
+			$('.layers #app span').text($('ul.devices li.active').data('language'));
 
 			$('.layers').addClass('sdk');
 			$('.layers').removeClass('api');
 			$('.layers').removeClass('database');
 			$('.layers').removeClass('none');
-		} else if($(this).text() == "API"){
+		} else if($(this).data('type') == "db"){
 			$('.connection_output').removeClass('active');
-			$('.connection_output.api').addClass('active');
-			$('.layers #app span').text("Your App");
-
-			$('.layers').removeClass('sdk');
-			$('.layers').addClass('api');
-			$('.layers').removeClass('database');
-			$('.layers').removeClass('none');
-		} else if($(this).text() == "Database"){
-			$('.connection_output').removeClass('active');
-			$('.connection_output.database').addClass('active');
-			$('.layers #app span').text("Your App");
+			// $('.connection_output.database').addClass('active');
+			// $('.layers #app span').text("Your App");
+			$('.connection_output.devices').addClass('active');
+			$('.layers #app span').text($('ul.devices li.active').data('language'));
 
 			$('.layers').removeClass('sdk');
 			$('.layers').removeClass('api');
 			$('.layers').addClass('database');
 			$('.layers').removeClass('none');
-		} else if($(this).text() == "None"){
+		} else if($(this).data('type') == "none"){
 			$('.connection_output').removeClass('active');
 			$('.connection_output.none').addClass('active');
 
@@ -193,11 +186,11 @@ $(document).ready(function(){
 		}
 	});
 
-	$('ul.sdks li').on("click", function(e) {
+	$('ul.devices li').on("click", function(e) {
 		e.preventDefault();
-		$('.layers #app span').text("Your App" + $(this).data('language'));
+		$('.layers #app span').text($(this).data('language'));
 		$('.layers #app i').html($(this).data('icon'));
-		$('.sdks li').removeClass('active');
+		$('ul.devices li').removeClass('active');
 		$(this).addClass('active');
 	});
 

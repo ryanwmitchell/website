@@ -17,7 +17,8 @@ ul.roadmap {
 		ul {
 			padding: 20px;
 			list-style: none;
-			margin-left: 50%;border-left: 2px solid $lighter-gray;
+			margin-left: 50%;
+			border-left: 2px solid $lighter-gray;
 			padding-bottom: 40px;
 			li {
 				transition: $medium $transition all;
@@ -68,7 +69,7 @@ ul.roadmap {
 					height: 10px;
 					background-color: $light-gray;
 					border-radius: 100%;
-					border: 4px solid $lightest-gray;
+					border: 4px solid $body-background;
 				}
 				&:nth-child(odd) {
 					text-align: right;

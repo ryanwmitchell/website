@@ -252,8 +252,12 @@ header {
 	.content {
 		max-width: 520px;
 		padding-bottom: 40px;
-		&.with-angle {
+		&.intro {
 			padding-top: 40px;
+			max-width: 560px;
+			p {
+				color: $lighter-gray;
+			}
 		}
 	}
 	.angle {
@@ -296,7 +300,7 @@ header {
 			color: $darkest-gray;
 		}
 	}
-	@media (max-width: $breakpoint-small) {
+	@media (max-width: $breakpoint-medium) {
 		display: none;
 	}
 }

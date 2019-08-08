@@ -125,81 +125,81 @@
 		<section id="contact-us">
 			<div class="wide border">
 				<aside>
-					<div class="window small chromeless office-image"></div>
+					<div class="window medium chromeless office-image"></div>
 					<div>
-						<h3>Directus Headquarters</h3>
+						<h3>Contact Directus</h3>
 						<p>Located in Brooklyn NYC, our office serves as a headquarters for staff in the NYC area. Interested in dropping by? Let’s chat on Slack!</p>
-						<div class="links">
-							<a href="mailto:info@directus.io?subject=I'd+like+to+learn+more+about+Directus!" class="blue internal" target="_blank">Contact Us</a>
-						</div>
+						<ul class="contact">
+							<li class="byline">
+								<a href="https://goo.gl/maps/L8MDtUwMkKE2" target="_blank">
+									<span><i class="material-icons">location_city</i></span>
+									<p>
+										<b>Headquarters</b>
+										Brooklyn, NY
+									</p>
+								</a>
+							</li>
+							<li class="byline">
+								<a href="mailto:info@directus.io?subject=I'd+like+to+learn+more+about+Directus!" target="_blank">
+									<span><i class="material-icons">alternate_email</i></span>
+									<p>
+										<b>General Inquiries</b>
+										info@directus.io
+									</p>
+								</a>
+							</li>
+							<li class="byline open-chat" onclick="$crisp.push(['do', 'chat:open'])">
+								<a href="#" target="_blank">
+									<span><i class="material-icons nudge-down">question_answer</i></span>
+									<p>
+										<b>Live Chat</b>
+										Open Chat
+									</p>
+								</a>
+							</li>
+							<li class="byline">
+								<a href="https://directus.chat" target="_blank">
+									<span><i class="material-icons nudge-down">contact_support</i></span>
+									<p>
+										<b>Community Support</b>
+										Join Slack
+									</p>
+								</a>
+							</li>
+							<!-- <li class="byline">
+								<a href="https://github.com/directus/directus/issues/new" target="_blank">
+									<span><i class="material-icons">bug_report</i></span>
+									<p>
+										<b>Report a Bug</b>
+										Launch GitHub
+									</p>
+								</a>
+							</li>
+							<li class="byline">
+								<a href="https://github.com/directus/app/issues/new?template=Feature_request.md" target="_blank">
+									<span><i class="material-icons nudge-up">how_to_vote</i></span>
+									<p>
+										<b>Request a Feature</b>
+										Launch GitHub
+									</p>
+								</a>
+							</li> -->
+						</ul>
+						<!-- <div class="buttons">
+							<a href="mailto:info@directus.io?subject=I'd+like+to+learn+more+about+Directus!" class="bright" target="_blank">Contact Us</a>
+						</div> -->
 					</div>
 				</aside>
-				<ul class="contact">
-					<li class="byline">
-						<a href="https://goo.gl/maps/L8MDtUwMkKE2" target="_blank">
-							<i class="material-icons">location_city</i>
-							<p>
-								<b>Headquarters</b>
-								Brooklyn, NY
-							</p>
-						</a>
-					</li>
-					<li class="byline">
-						<a href="mailto:info@directus.io?subject=I'd+like+to+learn+more+about+Directus!" target="_blank">
-							<i class="material-icons">alternate_email</i>
-							<p>
-								<b>General Inquiries</b>
-								info@directus.io
-							</p>
-						</a>
-					</li>
-					<li class="byline open-chat" onclick="$crisp.push(['do', 'chat:open'])">
-						<a href="#" target="_blank">
-							<i class="material-icons">question_answer</i>
-							<p>
-								<b>Live Chat</b>
-								Open Chat
-							</p>
-						</a>
-					</li>
-					<li class="byline">
-						<a href="https://slack.directus.io" target="_blank">
-							<i class="material-icons">contact_support</i>
-							<p>
-								<b>Support</b>
-								Join Slack
-							</p>
-						</a>
-					</li>
-					<li class="byline">
-						<a href="https://github.com/directus/directus/issues/new" target="_blank">
-							<i class="material-icons">bug_report</i>
-							<p>
-								<b>Bug Reports</b>
-								Launch GitHub
-							</p>
-						</a>
-					</li>
-					<li class="byline">
-						<a href="https://github.com/directus/app/issues/new?template=Feature_request.md" target="_blank">
-							<i class="material-icons">how_to_vote</i>
-							<p>
-								<b>Feature Requests</b>
-								Launch GitHub
-							</p>
-						</a>
-					</li>
-				</ul>
 			</div>
 		</section>
 		<section id="the-team">
 			<div class="wide">
-				<h2><b>The Core Directus Team.</b> Our headquarters are in Brooklyn, NYC – but our team is located all over the world. That’s why Directus has such deeply integrated internationalization!</h2>
+				<h2><b>Brooklyn-based leadership and international contributors.</b> Our diverse team is located all over the world and speaks many different languages. Come join us!</h2>
 
 				<ul class="team core">
 					<li class="byline xlarge">
 						<a href="https://github.com/benhaynes" target="_blank">
-							<img src="./img/team/ben-haynes.jpg">
+							<div class="avatar"><img src="./img/team/ben-haynes.jpg"></div>
 							<p>
 								<b>Ben Haynes</b>
 								Project/Creative Lead
@@ -208,7 +208,7 @@
 					</li>
 					<li class="byline xlarge">
 						<a href="https://github.com/rijkvanzanten" target="_blank">
-							<img src="./img/team/rijk-van-zanten.jpg">
+							<div class="avatar"><img src="./img/team/rijk-van-zanten.jpg"></div>
 							<p>
 								<b>Rijk van Zanten</b>
 								Technical Lead
@@ -217,30 +217,12 @@
 					</li>
 				</ul>
 
-				<h2>Advisors &amp; Key Contributors</h2>
+				<h2>Key Contributors</h2>
 
 				<ul class="team contributors">
 					<li class="byline large">
-						<a href="https://www.linkedin.com/in/tim-matusch-a4b3a464/" target="_blank">
-							<img src="./img/team/tim-matusch.jpg">
-							<p>
-								<b>Tim Matusch</b>
-								Business Advisor
-							</p>
-						</a>
-					</li>
-					<li class="byline large">
-						<a href="https://github.com/jmckinney" target="_blank">
-							<img src="./img/team/john-mckinney.jpg">
-							<p>
-								<b>John McKinney</b>
-								Technical Advisor
-							</p>
-						</a>
-					</li>
-					<li class="byline large">
 						<a href="https://github.com/shealavington" target="_blank">
-							<img src="./img/team/shea-lavington.jpg">
+							<div class="avatar"><img src="./img/team/shea-lavington.jpg"></div>
 							<p>
 								<b>Shea Lavington</b>
 								Developer Advocate
@@ -249,7 +231,7 @@
 					</li>
 					<li class="byline large">
 						<a href="https://github.com/bjgajjar" target="_blank">
-							<img src="./img/team/binal-gajjar.jpg">
+							<div class="avatar"><img src="./img/team/binal-gajjar.jpg"></div>
 							<p>
 								<b>Binal Gajjar</b>
 								API Developer
@@ -258,7 +240,7 @@
 					</li>
 					<li class="byline large">
 						<a href="https://github.com/hemratna" target="_blank">
-							<img src="./img/team/hem-bhimani.jpg">
+							<div class="avatar"><img src="./img/team/hem-bhimani.jpg"></div>
 							<p>
 								<b>Hem Bhimani</b>
 								API Developer
@@ -266,8 +248,17 @@
 						</a>
 					</li>
 					<li class="byline large">
+						<a href="https://github.com/janbiasi" target="_blank">
+							<div class="avatar"><img src="./img/team/jan-biasi.jpg"></div>
+							<p>
+								<b>Jan Biasi</b>
+								JS-SDK Lead
+							</p>
+						</a>
+					</li>
+					<li class="byline large">
 						<a href="https://github.com/theharshin" target="_blank">
-							<img src="./img/team/harsh-kansagara.jpg">
+							<div class="avatar"><img src="./img/team/harsh-kansagara.jpg"></div>
 							<p>
 								<b>Harsh Kansagara</b>
 								App Developer
@@ -276,7 +267,7 @@
 					</li>
 					<li class="byline large">
 						<a href="https://github.com/WoLfulus" target="_blank">
-							<img src="./img/team/joao-biondo.jpg">
+							<div class="avatar"><img src="./img/team/joao-biondo.jpg"></div>
 							<p>
 								<b>João Biondo</b>
 								Docker Developer
@@ -284,8 +275,26 @@
 						</a>
 					</li>
 					<li class="byline large">
+						<a href="https://github.com/kaushal-im" target="_blank">
+							<div class="avatar"><img src="./img/team/kaushal-gajjar.jpg"></div>
+							<p>
+								<b>Kaushal Gajjar</b>
+								Project Manager
+							</p>
+						</a>
+					</li>
+					<li class="byline large">
+						<a href="https://github.com/itsmerhp" target="_blank">
+							<div class="avatar"><img src="./img/team/rahul-patel.jpg"></div>
+							<p>
+								<b>Rahul Patel</b>
+								API Developer
+							</p>
+						</a>
+					</li>
+					<li class="byline large">
 						<a href="https://github.com/stickgrinder" target="_blank">
-							<img src="./img/team/paolo-pustorino.jpg">
+							<div class="avatar"><img src="./img/team/paolo-pustorino.jpg"></div>
 							<p>
 								<b>Paolo Pustorino</b>
 								Docker Developer
@@ -294,7 +303,7 @@
 					</li>
 					<li class="byline large">
 						<a href="http://linkedin.com/in/rachel-yufei-sun" target="_blank">
-							<img src="./img/team/rachel-sun.jpg">
+							<div class="avatar"><img src="./img/team/rachel-sun.jpg"></div>
 							<p>
 								<b>Rachel Sun</b>
 								Designer
@@ -303,7 +312,7 @@
 					</li>
 					<li class="byline large">
 						<a href="https://dribbble.com/bigoodis" target="_blank">
-							<img src="./img/team/ivan-bobrov.jpg">
+							<div class="avatar"><img src="./img/team/ivan-bobrov.jpg"></div>
 							<p>
 								<b>Ivan Bobrov</b>
 								Logo Design
@@ -312,16 +321,16 @@
 					</li>
 					<li class="byline large">
 						<a href="https://dribbble.com/Beresnev" target="_blank">
-							<img src="./img/team/oleg-beresnev.jpg">
+							<div class="avatar"><img src="./img/team/oleg-beresnev.jpg"></div>
 							<p>
 								<b>Oleg Beresnev</b>
-								Illustration
+								Illustrator
 							</p>
 						</a>
 					</li>
 					<li class="byline large">
 						<a href="https://github.com/howCodeORG" target="_blank">
-							<img src="./img/team/francis-mcnamee.jpg">
+							<div class="avatar"><img src="./img/team/francis-mcnamee.jpg"></div>
 							<p>
 								<b>Francis McNamee</b>
 								Video Tutorials
@@ -330,7 +339,7 @@
 					</li>
 					<li class="byline large">
 						<a href="https://github.com/wellingguzman" target="_blank">
-							<img src="./img/team/welling-guzman.jpg">
+							<div class="avatar"><img src="./img/team/welling-guzman.jpg"></div>
 							<p>
 								<b>Welling Guzman</b>
 								Core Developer
@@ -339,7 +348,7 @@
 					</li>
 					<li class="byline large">
 						<a href="https://github.com/coolov" target="_blank">
-							<img src="./img/team/olov-sundstrom.jpg">
+							<div class="avatar"><img src="./img/team/olov-sundstrom.jpg"></div>
 							<p>
 								<b>Olov Sundström</b>
 								Core Developer
@@ -348,7 +357,7 @@
 					</li>
 					<li class="byline large">
 						<a href="https://github.com/freen" target="_blank">
-							<img src="./img/team/daniel-bickett.jpg">
+							<div class="avatar"><img src="./img/team/daniel-bickett.jpg"></div>
 							<p>
 								<b>Daniel Bickett</b>
 								Core Developer
@@ -357,7 +366,7 @@
 					</li>
 					<li class="byline large">
 						<a href="https://github.com/jel-massih" target="_blank">
-							<img src="./img/team/jason-el-massih.jpg">
+							<div class="avatar"><img src="./img/team/jason-el-massih.jpg"></div>
 							<p>
 								<b>Jason El-Massih</b>
 								Core Developer
@@ -366,7 +375,7 @@
 					</li>
 					<li class="byline large">
 						<a href="https://github.com/lasha" target="_blank">
-							<img src="./img/team/lasha-krikheli.jpg">
+							<div class="avatar"><img src="./img/team/lasha-krikheli.jpg"></div>
 							<p>
 								<b>Lasha Krikheli</b>
 								Core Developer
@@ -375,7 +384,7 @@
 					</li>
 					<li class="byline large">
 						<a href="https://github.com/honzabilek4" target="_blank">
-							<img src="./img/team/jan-bilek.jpg">
+							<div class="avatar"><img src="./img/team/jan-bilek.jpg"></div>
 							<p>
 								<b>Jan Bílek</b>
 								Key Contributor
@@ -384,7 +393,7 @@
 					</li>
 					<li class="byline large">
 						<a href="https://github.com/maxgsoulcycle" target="_blank">
-							<img src="./img/team/max-glantzman.jpg">
+							<div class="avatar"><img src="./img/team/max-glantzman.jpg"></div>
 							<p>
 								<b>Max Glantzman</b>
 								Key Contributor
@@ -393,30 +402,39 @@
 					</li>
 					<li class="byline large">
 						<a href="https://github.com/miked63017" target="_blank">
-							<img src="./img/team/mike-donlon.jpg">
+							<div class="avatar"><img src="./img/team/mike-donlon.jpg"></div>
 							<p>
 								<b>Mike Donlon</b>
 								Key Contributor
 							</p>
 						</a>
 					</li>
-					<li class="byline large">
-						<a href="https://github.com/jasekz" target="_blank">
-							<img src="./img/team/zig-jasek.jpg">
-							<p>
-								<b>Zig Jasek</b>
-								Key Contributor
-							</p>
-						</a>
-					</li>
 				</ul>
 
-				<h2>Partners &amp; Sponsors</h2>
+				<h2>Advisors, Partners, &amp; Sponsors</h2>
 
 				<ul class="team sponsors">
 					<li class="byline large">
+						<a href="https://www.linkedin.com/in/tim-matusch-a4b3a464/" target="_blank">
+							<div class="avatar"><img src="./img/team/tim-matusch.jpg"></div>
+							<p>
+								<b>Tim Matusch</b>
+								Business Advisor
+							</p>
+						</a>
+					</li>
+					<li class="byline large">
+						<a href="https://github.com/jmckinney" target="_blank">
+							<div class="avatar"><img src="./img/team/john-mckinney.jpg"></div>
+							<p>
+								<b>John McKinney</b>
+								Technical Advisor
+							</p>
+						</a>
+					</li>
+					<li class="byline large">
 						<a href="http://rangerstudio.com/" target="_blank">
-							<img src="./img/partners/r.svg">
+							<div class="avatar"><img src="./img/partners/r.svg"></div>
 							<p>
 								<b>RANGER Studio</b>
 								Managing Partner
@@ -425,7 +443,7 @@
 					</li>
 					<li class="byline large">
 						<a href="https://7span.com/" target="_blank">
-							<img src="./img/partners/7span.svg">
+							<div class="avatar"><img src="./img/partners/7span.svg"></div>
 							<p>
 								<b>7Span</b>
 								Partner
@@ -434,7 +452,7 @@
 					</li>
 					<li class="byline large">
 						<a href="https://github.com/swttt" target="_blank">
-							<img src="./img/partners/bas-jansen.jpg">
+							<div class="avatar"><img src="./img/partners/bas-jansen.jpg"></div>
 							<p>
 								<b>Bas Jansen</b>
 								Sponsor
@@ -443,7 +461,7 @@
 					</li>
 					<li class="byline large">
 						<a href="https://github.com/meaganhaynes" target="_blank">
-							<img src="./img/partners/meagan-haynes.jpg">
+							<div class="avatar"><img src="./img/partners/meagan-haynes.jpg"></div>
 							<p>
 								<b>Meagan Haynes</b>
 								Sponsor
@@ -456,9 +474,9 @@
 		</section>
 		<section id="join-us" class="invert">
 			<div class="wide">
-				<h2><b>Join our team of passionate and talented engineers.</b> If you’re interested in joining the Directus team please reach out to one of our core members on Slack.</h2>
-				<div class="buttons center">
-					<a href="https://directus.chat" target="_blank">Join us on Slack</a>
+				<h2><b>Join our growing team of passionate and talented staff.</b> If you’re interested in joining the Directus team please reach out to one of our core members on Slack.</h2>
+				<div class="buttons margin center">
+					<a href="https://directus.chat" class="bright" target="_blank">Join us on Slack</a>
 				</div>
 				<img src="./img/animated/directus-babies-half.gif">
 				<!-- <video autoplay loop>
@@ -472,15 +490,8 @@
 			<div class="wide">
 				<h2><b>It's not easy building premium open-source software.</b> If you would like to help ensure Directus stays free, please consider providing financial support through our Patreon.</h2>
 
-				<div class="center margin-t-40 margin-b-40">
-					<div class="buttons center" style="margin-bottom:10px;">
-						<a href="https://www.patreon.com/directus" class="bright big" target="_blank">Become a Patron</a>
-					</div>
-					<a href="https://docs.directus.io/getting-started/supporting-directus.html" class="blue" target="_blank">Other Ways to Support Directus</a>
-				</div>
-
 				<p>
-					We've been perfecting this platform for over ten years, slowly growing a dedicated community and a small team of passionate contributors. Our roadmap consistently extends one year out, filled with many new features, performance enhancements, ports, add-ons, and other innovations – but without proper funding, updates and fixes can be sluggish. Our core staff is currently subsidized by <a href="http://rangerstudio.com" target="_blank">RANGER Studio</a> (a digital agency in NYC), but this means that we are beholden to their resources and needs.
+					We've been perfecting this platform for over fourteen years, slowly growing a dedicated community and a small team of passionate contributors. Our roadmap consistently extends one year out, filled with new features, performance optimizations, extensions, and other enhancements – but without proper funding, updates and fixes can be sluggish. Our core staff is currently subsidized by <a href="http://rangerstudio.com" target="_blank">RANGER Studio</a> (a digital agency in NYC), but this means that we are beholden to their resources and needs.
 				</p>
 				<p>
 					We would like Directus to become its own self-managing entity, but to do that we first need to cover the expense of servers and full-time engineers. Only then can we ensure Directus maintains its quality, continues to improve over time, and most importantly, stays free and open-source.
@@ -490,18 +501,25 @@
 				</p>
 				<p>
 					Love,<br>
-					The Directus Team
+					The Directus Team 🐰
 				</p>
+
+				<div class="center margin-t-80 margin-b-80">
+					<div class="buttons center" style="margin-bottom:10px;">
+						<a href="https://www.patreon.com/directus" class="bright big" target="_blank">Become a Patron</a>
+						<a href="https://docs.directus.io/getting-started/supporting-directus.html" class="bright ghost big" target="_blank">Other Support Options</a>
+					</div>
+				</div>
 
 			</div>
 		</section>
 	</main>
 	<footer>
-		<svg class="angle" version="1.1" viewBox="0 0 1000 40" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+		<!-- <svg class="angle" version="1.1" viewBox="0 0 1000 40" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
 			<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
 				<polygon fill="#263238" points="1000 0 0 40 0 0"></polygon>
 			</g>
-		</svg>
+		</svg> -->
 		<div class="wide cta">
 			<div class="content">
 				<div class="left">
@@ -527,7 +545,7 @@
 								<path fill="#546e7a" d="M179.799344,3107 C168.865902,3107 160,3115.86393 160,3126.79934 C160,3135.54754 165.673115,3142.96885 173.54,3145.58721 C174.52918,3145.77082 174.892459,3145.1577 174.892459,3144.63475 C174.892459,3144.16262 174.874098,3142.60295 174.865574,3140.94852 C169.357377,3142.14623 168.195082,3138.61246 168.195082,3138.61246 C167.294426,3136.32393 165.996721,3135.71541 165.996721,3135.71541 C164.2,3134.48656 166.132131,3134.51213 166.132131,3134.51213 C168.12,3134.65148 169.167213,3136.55246 169.167213,3136.55246 C170.933115,3139.57869 173.799016,3138.70393 174.928852,3138.19836 C175.106557,3136.91869 175.619672,3136.04492 176.185902,3135.55049 C171.788197,3135.05049 167.164918,3133.35246 167.164918,3125.7659 C167.164918,3123.60426 167.938689,3121.83803 169.205246,3120.45115 C168.999344,3119.95279 168.321639,3117.93902 169.396721,3115.2118 C169.396721,3115.2118 171.059016,3114.67967 174.842623,3117.24131 C176.422295,3116.8023 178.116393,3116.58164 179.799344,3116.5741 C181.481311,3116.58164 183.176393,3116.80164 184.759016,3117.24066 C188.538033,3114.67902 190.198361,3115.21115 190.198361,3115.21115 C191.276066,3117.93803 190.598361,3119.95213 190.392787,3120.45049 C191.662295,3121.83738 192.430492,3123.60361 192.430492,3125.76525 C192.430492,3133.36984 187.798689,3135.04393 183.389836,3135.53443 C184.100328,3136.14885 184.733115,3137.3541 184.733115,3139.20098 C184.733115,3141.85016 184.710164,3143.9823 184.710164,3144.63443 C184.710164,3145.16131 185.066885,3145.77869 186.070164,3145.58426 C193.932459,3142.96328 199.599016,3135.54426 199.599016,3126.79934 C199.598689,3115.86459 190.73377,3107.00033 179.799344,3107.00033 L179.799344,3107 Z" transform="translate(-160 -3107)"/>
 							</svg>
 						</a>
-						<a href="https://slack.directus.io" target="_blank">
+						<a href="https://directus.chat" target="_blank">
 							<svg xmlns="http://www.w3.org/2000/svg" width="40" height="39" viewBox="0 0 40 39">
 								<g fill="#546e7a">
 								<polygon points="16.517 17.768 18.216 22.667 23.483 20.962 21.784 16.063"/>
@@ -560,7 +578,7 @@
 			</ul>
 			<ul>
 				<li><a href="./resources.html">Resources</a></li>
-				<li><a href="./resources.html#documentation">Documentation &amp; Guides</a></li>
+				<li><a href="./resources.html#documentation">Docs &amp; Guides</a></li>
 				<li><a href="./resources.html#feature-request">Feature Request</a></li>
 				<li><a href="./resources.html#community">Community</a></li>
 				<li><a href="./resources.html#roadmap">Roadmap</a></li>

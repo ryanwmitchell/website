@@ -13,31 +13,42 @@ h1 {
 }
 
 h2 {
-	font-size: 1.5rem;
-	line-height: 2.2rem;
-	color: $light-gray;
-	max-width: 640px;
+	font-size: 32px;
+	line-height: 48px;
+	font-weight: 300;
+	max-width: 800px;
 	margin: auto;
 	text-align: center;
+	color: $gray;
+	@media (max-width: $breakpoint-medium) {
+		font-size: 24px;
+		line-height: 38px;
+	}
 	&.vision {
-		line-height: 2.8rem;
-		max-width: 800px;
+		max-width: 1000px;
 		text-align: left;
 		margin-top: 80px;
 		margin-bottom: 80px;
 	}
 	b {
 		color: $darkest-gray;
-		font-weight: normal;
+		font-weight: 300;
+		&.highlight {
+			// background-color: $accent-light;
+			// padding: 2px 2px;
+			// margin: 0 -2px;
+			// border-radius: 3px;
+			color: $accent;
+		}
 	}
 }
 
 h3 {
-	font-size: 1.3rem;
+	font-size: 22px;
 }
 
 h4 {
-	font-size: 1.125rem;
+	font-size: 20px;
 }
 
 h5 {
@@ -45,8 +56,8 @@ h5 {
 }
 
 p {
-  color: $light-gray;
-  line-height: 1.6;
+  color: $gray;
+  line-height: 1.7;
 }
 
 .center {
@@ -87,5 +98,20 @@ p {
 		margin-left: 6px;
 		display: inline-block;
 		margin-top: -3px;
+	}
+}
+
+del {
+	position: relative;
+	text-decoration: none;
+	&:after{
+		content: "";
+		position: absolute;
+		top: 58%;
+		left: 0;
+		width: 100%;
+		height: 2px;
+		background-color: $darkest-gray;
+		transform: rotate(2.5deg);
 	}
 }

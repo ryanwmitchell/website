@@ -111,33 +111,32 @@
 		<div class="wide">
 			<a href="#directus-app">Directus App</a>
 			<a href="#directus-api">Directus API</a>
-			<a href="#directus-sdks">Directus SDKs</a>
+			<a href="#directus-suite">Directus Suite</a>
+			<a href="#directus-sdks">SDKs</a>
 			<a href="#marketplace">Marketplace</a>
 			<a href="#tools">Tools</a>
 		</div>
 	</div>
 	<main>
 		<section id="directus-app">
-			<div class="wide border">
+			<div class="normal border">
 				<aside>
 					<div class="window small">
-						<img src="img/directus.svg" class="pad-directus">
+						<img src="img/static/rocket-angled.png" class="pad-directus">
 					</div>
 					<div>
 						<h3>The Directus App<span class="badge accent free">Free</span></h3>
-						<p>Simple and intuitive, the Directus App is the easiest way for users to manage project content. Just sign-in to any Directus API instance and you're ready to go.</p>
-						<div class="links">
-							<a href="https://github.com/directus/app/releases" class="blue internal" target="_blank">Download the App</a>
-							<a href="https://docs.directus.io/guides/user-guide.html" class="blue internal" target="_blank">User Guide</a>
-							<a href="https://directus.app" class="blue internal" target="_blank">Try the Demo</a>
-							<p class="small"><span class="creds"> <code>admin@example.com</code> + <code>password</code></span></p>
+						<p>Simple and intuitive, the Directus App makes it easy for admins and non-technical users alike to manage content. It's also fully static, so you can host it anywhere.</p>
+						<div class="buttons">
+							<a href="https://github.com/directus/app/releases" class="bright" target="_blank">Download the App</a>
+							<a href="https://docs.directus.io/guides/user-guide.html" class="ghost bright" target="_blank">User Guide</a>
 						</div>
 					</div>
 				</aside>
 				<div class="three-up">
 					<div>
 						<h4>Multitenancy</h4>
-						<p>The Directus 7 App is completely decoupled from the API, so you can now use one app to connect to any number of database instances and environments.</p>
+						<p>The Directus 7 App is completely decoupled from the API, so you can now use one app to connect to any number of database instances &amp; environments.</p>
 						<a href="https://docs.directus.io/getting-started/concepts.html#multitenancy" class="blue internal">Learn More</a>
 					</div>
 					<div>
@@ -147,7 +146,7 @@
 					</div>
 					<div>
 						<h4>Revisions &amp; Rollback</h4>
-						<p>Every change you make, every item you break – we've got you covered. You can browse all edits made through the App or API and revert back to any previous state.</p>
+						<p>Every change you make, every item you break – we've got you covered. You can browse through all content edits and revert back to previous states.</p>
 						<a href="https://docs.directus.io/guides/accountability.html#revisions" class="blue internal">Learn More</a>
 					</div>
 				</div>
@@ -176,7 +175,7 @@
 			</div>
 		</section>
 		<section id="directus-api">
-			<div class="wide border">
+			<div class="normal border">
 				<aside>
 					<div class="window small">
 						<img src="img/static/dynamic.png">
@@ -184,10 +183,9 @@
 					<div>
 						<h3>The Directus API<span class="badge accent free">Free</span></h3>
 						<p>Give your SQL database a RESTful API in minutes. Our dynamic API pulls everything it needs from your schema – no more black-boxed solutions.</p>
-						<div class="links">
-							<a href="https://github.com/directus/api/releases" class="blue internal" target="_blank">Download the API</a>
-							<a href="https://docs.directus.io/api/reference.html" class="blue internal" target="_blank">API Reference</a>
-							<a href="https://next.demo-api.directus.app/_/items/theaters" class="blue internal" target="_blank">Try the Demo</a>
+						<div class="buttons">
+							<a href="https://github.com/directus/api/releases" class="bright" target="_blank">Download the API</a>
+							<a href="https://docs.directus.io/api/reference.html" class="bright ghost" target="_blank">API Reference</a>
 						</div>
 					</div>
 				</aside>
@@ -210,6 +208,10 @@
 				</div>
 				<ul class="features margin-t">
 					<li>
+						<i class="material-icons">code</i>
+						GraphQL Included
+					</li>
+					<li>
 						<i class="material-icons">filter_list</i>
 						Advanced Filtering
 					</li>
@@ -225,13 +227,58 @@
 						<i class="material-icons">storage</i>
 						Storage Adapters
 					</li>
-					<li>
-						<i class="material-icons">toll</i>
-						Static &amp; Temp Tokens
-					</li>
 				</ul>
 			</div>
 		</section>
+		<section id="directus-suite">
+			<div class="normal border">
+				<aside>
+					<div class="window small">
+						<img src="img/directus.svg" class="pad-directus">
+					</div>
+					<div>
+						<h3>The Directus Suite<span class="badge accent free">Free</span></h3>
+						<p>The easiest way to self-host Directus. Our suite combines our powerful REST/GraphQL API, intuitive Admin App, and all required dependencies.</p>
+						<div class="buttons">
+							<a href="https://github.com/directus/directus/releases" class="bright" target="_blank">Download the Suite</a>
+							<a href="https://hub.docker.com/r/directus/directus" class="bright ghost docker" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="34" height="23"><g fill="#2196F3" fill-rule="evenodd"><path d="M18.8017 10.5442h3.4333v-3.101h-3.4333zM14.745 10.5442h3.4333v-3.101H14.745v3.101zM10.6892 10.5442h3.4325v-3.101h-3.4334v3.101zM6.6316 10.5442h3.4334v-3.101H6.6316zM2.5759 10.5442h3.4324v-3.101H2.576v3.101zM6.6326 6.8226h3.4324v-3.101H6.6316v3.101zM10.6892 6.8226h3.4325v-3.101h-3.4334v3.101zM14.745 6.8226h3.4333v-3.101H14.745v3.101zM14.745 3.101h3.4333V0H14.745v3.101z"/><path d="M28.752 8.3043c-.1708-1.2412-.8667-2.317-2.1326-3.2901l-.727-.482-.4866.7243c-.6197.9309-.9318 2.2216-.829 3.46.046.4351.19 1.2145.6408 1.8993-.4498.2405-1.3366.572-2.5144.549H.1285l-.045.2589c-.2111 1.2439-.2075 5.1252 2.329 8.1087 1.9269 2.2675 4.8168 3.4178 8.5889 3.4178 8.1757 0 14.2245-3.741 17.0565-10.5406 1.1136.022 3.5132.0064 4.7461-2.3326.0312-.0533.1056-.1947.3204-.638l.1184-.2424-.693-.46c-.75-.4984-2.4723-.681-3.7979-.4323z"/></g></svg> Docker Container</a>
+							<!-- <a href="https://docs.directus.io/getting-started/installation.html" class="ghost bright" target="_blank">How to Install</a> -->
+						</div>
+					</div>
+				</aside>
+			</div>
+		</section>
+		<!-- <section>
+			<div class="wide border">
+				<h2><b>No assumptions.</b> That’s our motto, and we mean it. It’s your content, your workflow, your stack, your servers, and your database – Directus stays out of the way.</h2>
+				<div class="three-up-alt">
+					<div>
+						<span><i class="material-icons">gesture</i></span>
+						<h3>Completely Customizable</h3>
+						<p>You have total control over the database, so you can architect and optimize with no limitations. And nearly every aspect of Directus is modular and extensible – so you'll never hit a ceiling.</p>
+						<a href="https://docs.directus.io/extensions/" class="blue internal" target="_blank">Learn More: Extensions</a>
+					</div>
+					<div>
+						<span><i class="material-icons">translate</i></span>
+						<h3>Full Internationalization</h3>
+						<p>Manage multilingual content in as many languages as your project needs. And for international teams, the Directus App itself supports 10+ locales out-of-the-box.</p>
+						<a href="https://docs.directus.io/guides/i18n.html" class="blue internal" target="_blank">Learn More: Translations</a>
+					</div>
+					<div>
+						<span><i class="material-icons">fingerprint</i></span>
+						<h3>Modular Authentication</h3>
+						<p>Choose from the built-in Directus Auth or any of our modular SSO options: Google, Okta, GitHub, Twitter, and Facebook. For enterprise, we also support SCIM so you can remotely manage your users from Active Directory or elsewhere.</p>
+						<a href="https://docs.directus.io/extensions/auth-providers.html" class="blue internal" target="_blank">Learn More: Auth</a>
+					</div>
+					<div>
+						<span><i class="material-icons">visibility_off</i></span>
+						<h3>Roles &amp; Permissions</h3>
+						<p>In addition to the basic CRUD support you'd expect, we've added: user/role scoping, field-level read/write permissions, IP whitelisting, update explanation enforcement, allowed statuses, and fully-customizable authoring workflows.</p>
+						<a href="https://docs.directus.io/guides/permissions.html" class="blue internal" target="_blank">Learn More: Permissions</a>
+					</div>
+				</div>
+			</div>
+		</section> -->
 		<section id="directus-sdks">
 			<div class="wide">
 				<h2><b>The Directus SDKs &amp; API Clients.</b> Develop projects in any language, connecting to your data through the Directus API or any of our many SDKs listed below.</h2>
@@ -363,112 +410,108 @@
 		</section>
 		<section id="marketplace" class="invert">
 			<div class="wide">
-				<h2><b>Community-driven Marketplace of extensions.</b> Browse interfaces, listing views, pages, auth modules, storage adapters, and more. Best of all – everything's free!</h2>
-				<div class="buttons center">
-					<a href="https://marketplace.directus.io" target="_blank">Coming Soon</a>
-					<!-- Browse Marketplace -->
+				<!-- <h2><b>Community-driven Marketplace of extensions.</b> Browse interfaces, listing views, pages, auth modules, storage adapters, and more. Best of all – everything's free!</h2> -->
+				<h2><b>50+ interfaces out-of-the-box for fine tuning your forms.</b> Create, manage, and view your data like never before with these highly customizable components.</h2>
+				<div class="buttons margin-top center">
+					<!-- <a href="https://marketplace.directus.io" target="_blank">Browse Marketplace</a> -->
 				</div>
 				<div class="extensions">
 					<div class="card">
-						<div class="header red-bg">
-							<i class="material-icons">bubble_chart</i>
-						</div>
-						<h4>Data Visualization</h4>
-						<h5>by <b>Directus Team</b></h5>
-						<p>
-							This extension is used to lorem ipsum dolor sit amet, elit. Aliquam magna nisi, ut dapibus a, congue eget risus.
-						</p>
+						<div class="header red-bg"><i class="material-icons">format_quote</i></div>
+						<h4>WYSIWYG Editor</h4><h5>Core Interface</h5>
+						<p>Allows for rich-text editing for long-form articles and text. Also supports inline images, tables, and much more.</p>
 					</div>
 					<div class="card">
-						<div class="header yellow-bg">
-							<i class="material-icons">lock</i>
-						</div>
-						<h4>Okta SSO</h4>
-						<h5>by <b>Directus Team</b></h5>
-						<p>
-							This extension is used to lorem ipsum dolor sit amet, elit. Aliquam magna nisi, ut dapibus a, congue eget risus.
-						</p>
+						<div class="header yellow-bg"><i class="material-icons">replay</i></div>
+						<h4>Repeater</h4><h5>Core Interface</h5>
+						<p>Choose any number of nested fields and the repeater allows authors to create any number of reorderable JSON items.</p>
 					</div>
 					<div class="card">
-						<div class="header green-bg">
-							<i class="material-icons">lock</i>
-						</div>
-						<h4>Directus Cloud SSO</h4>
-						<h5>by <b>Directus Team</b></h5>
-						<p>
-							This extension is used to lorem ipsum dolor sit amet, elit. Aliquam magna nisi, ut dapibus a, congue eget risus.
-						</p>
+						<div class="header green-bg"><i class="material-icons">place</i></div>
+						<h4>Map</h4><h5>Core Interface</h5>
+						<p>Using the open-source Leaflet mapping system, this interface lets you easily save lat/lon coordinates with a click.</p>
 					</div>
 					<div class="card">
-						<div class="header blue-bg">
-							<i class="material-icons">photo_library</i>
-						</div>
-						<h4>CSV Slideshow</h4>
-						<h5>by <b>Directus Team</b></h5>
-						<p>
-							This extension is used to lorem ipsum dolor sit amet, elit. Aliquam magna nisi, ut dapibus a, congue eget risus.
-						</p>
+						<div class="header blue-bg"><i class="material-icons">event</i></div>
+						<h4>Calendar</h4><h5>Core Interface</h5>
+						<p>A dedicated calendar interface for quickly choosing a date. It also has options for min/max dates and formatting.</p>
 					</div>
 					<div class="card">
-						<div class="header yellow-bg">
-							<i class="material-icons">face</i>
-						</div>
-						<h4>Facial Recognition</h4>
-						<h5>by <b>Directus Team</b></h5>
-						<p>
-							This extension is used to lorem ipsum dolor sit amet, elit. Aliquam magna nisi, ut dapibus a, congue eget risus.
-						</p>
+						<div class="header red-bg"><i class="material-icons">toggle_on</i></div>
+						<h4>Toggle</h4><h5>Core Interface</h5>
+						<p>Simple, yet effective. Our toggle (or checkbox style) interface has options to show custom text when on or off.</p>
+					</div>
+					<div class="card">
+						<div class="header yellow-bg"><i class="material-icons">palette</i></div>
+						<h4>Color Picker</h4><h5>Core Interface</h5>
+						<p>Set predefined color options or allow custom color entry. Output can be saved as Hex, RGB, HSL, or even CMYK.</p>
+					</div>
+					<div class="card">
+						<div class="header green-bg"><i class="material-icons">text_fields</i></div>
+						<h4>Markdown</h4><h5>Core Interface</h5>
+						<p>Our Markdown editor is great for formatted text that isn't web-specific. Supports side-by-side or tabbed preview.</p>
+					</div>
+					<div class="card">
+						<div class="header blue-bg"><i class="material-icons">star</i></div>
+						<h4>Rating</h4><h5>Core Interface</h5>
+						<p>It's much harder to read/enter numerical ratings. Choose a color and max rating for a more intuitive interface.</p>
 					</div>
 				</div>
 			</div>
 		</section>
 		<section id="tools">
 			<div class="wide border">
-				<h2><b>Other free goodies.</b> Many components of Directus 7 are also useful standalone modules. We’ve made these libraries available in case you’d like to use them individually.</h2>
-				<div class="two-up">
+				<h2><b>More free goodies.</b> Many components of Directus are also useful standalone modules. We’ve made these libraries available so you can use them individually.</h2>
+				<div class="three-up-alt">
 					<div>
-						<i class="material-icons">collections</i>
-						<h3>Thumbnailer</h3>
-						<p>Automatically create thumbnails from higher-resolution images just by requesting a custom URL. Whitelist allowed parameters such as: dimensions, quality, crop, and more.</p>
+						<span><i class="material-icons">collections</i></span>
+						<h3>Auto-Thumbnailer</h3>
+						<p>Automatically create thumbnails from higher-resolution images just by requesting a custom URL with parameters.</p>
 						<a href="https://github.com/directus/thumbnailer" class="blue internal" target="_blank">Download on GitHub</a>
 					</div>
 					<div>
-						<i class="material-icons">spellcheck</i>
-						<h3>Title Formatter</h3>
-						<p>Database table and field names aren't always very human-readable. This simple tool intelligently formats strings like "firstAndLast" ("First and Last") and "pdf_file" ("PDF File").</p>
-						<a href="https://github.com/directus/format-title" class="blue internal" target="_blank">Download on GitHub</a>
+						<span><i class="material-icons">check</i></span>
+						<h3>System Status</h3>
+						<p>This simple page for showcasing your project's current system status, and provides a history of incidents.</p>
+						<a href="https://github.com/directus/system-status" class="blue internal" target="_blank">Download on GitHub</a>
 					</div>
 					<div>
-						<i class="material-icons">thumbs_up_down</i>
+						<span><i class="material-icons">thumbs_up_down</i></span>
 						<h3>Voting Tool</h3>
-						<p>Need an easy way to collect ranked feedback, features requests, or ideas? This little app gives your users a way to submit requests and/or vote on which they think are best.</p>
+						<p>This little app gives your users a way to submit feature requests, and vote on which they think are best.</p>
 						<a href="https://github.com/directus/voting-tool" class="blue internal" target="_blank">Download on GitHub</a>
 					</div>
-					<div>
-						<i class="material-icons">code</i>
+					<!-- <div>
+						<span><i class="material-icons">spellcheck</i></span>
+						<h3>Title Formatter</h3>
+						<p>This simple tool intelligently formats strings like "firstAndLast" into "First and Last" and "pdf_file" into "PDF File".</p>
+						<a href="https://github.com/directus/format-title" class="blue internal" target="_blank">Download on GitHub</a>
+					</div> -->
+					<!-- <div>
+						<span><i class="material-icons">code</i></span>
 						<h3>Static Site Generator</h3>
 						<p>An old tool for generating static sites from templates that directly reference database content. It hasn't been maintained in a while, but we will be updating it to work with v7 soon.</p>
 						<a href="https://github.com/directus/static-generator" class="blue internal" target="_blank">Download on GitHub</a>
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</section>
 		<section>
-			<div class="wide short">
+			<div class="wide">
 				<div class="center">
 					<div class="buttons center">
-						<a href="./services.html" class="dark big">Next: Services</a>
+						<a href="./services.html" class="bright big">Next: Services</a>
 					</div>
 				</div>
 			</div>
 		</section>
 	</main>
 	<footer>
-		<svg class="angle" version="1.1" viewBox="0 0 1000 40" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+		<!-- <svg class="angle" version="1.1" viewBox="0 0 1000 40" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
 			<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
 				<polygon fill="#263238" points="1000 0 0 40 0 0"></polygon>
 			</g>
-		</svg>
+		</svg> -->
 		<div class="wide cta">
 			<div class="content">
 				<div class="left">
@@ -527,7 +570,7 @@
 			</ul>
 			<ul>
 				<li><a href="./resources.html">Resources</a></li>
-				<li><a href="./resources.html#documentation">Documentation &amp; Guides</a></li>
+				<li><a href="./resources.html#documentation">Docs &amp; Guides</a></li>
 				<li><a href="./resources.html#feature-request">Feature Request</a></li>
 				<li><a href="./resources.html#community">Community</a></li>
 				<li><a href="./resources.html#roadmap">Roadmap</a></li>
