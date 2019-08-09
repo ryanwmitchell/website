@@ -322,6 +322,9 @@ header {
 		p {
 			color: $white;
 			padding-left: 32px;
+			a {
+				color: $white;
+			}
 		}
 		@media (max-width: $breakpoint-large) {
 			padding: 10px 60px;
