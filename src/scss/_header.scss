@@ -91,7 +91,7 @@ nav.top {
 	// background-color: rgba(38,50,56,0.9);
 	.wide {
 		position: relative;
-		padding: 30px 80px;
+		padding: 30px 60px;
 		@media (max-width: $breakpoint-large) {
 			padding: 30px 60px;
 		}
@@ -105,7 +105,7 @@ nav.top {
 	&.short {
 		box-shadow: 0px 2px 10px 0px rgba(38,50,56,0.4);
 		.wide {
-			padding: 10px 80px;
+			padding: 10px 60px;
 			@media (max-width: $breakpoint-large) {
 				padding: 10px 60px;
 			}
@@ -127,6 +127,16 @@ nav.top {
 		text-decoration: none;
 		margin-right: 40px;
 		color: $light-gray;
+		&.logo {
+			display: inline-flex;
+			align-items: center;
+			.directus {
+				color: $white;
+				margin-left: 16px;
+				font-size: 18px;
+				margin-top: -2px;
+			}
+		}
 		&:hover,
 		&.active {
 			color: $white;
@@ -150,6 +160,12 @@ nav.top {
 		float: right;
 		margin-top: 10px;
 		margin-right: 10px;
+		@media (max-width: 930px) {
+			display: none;
+		}
+		@media (max-width: $breakpoint-medium) {
+			display: block;
+		}
 	}
 	.cta {
 		transition: $medium $transition color;
@@ -312,11 +328,11 @@ header {
 	text-align: left;
 	.wide {
 		position: relative;
-		padding: 10px 80px;
+		padding: 10px 40px;
 		.material-icons {
 			position: absolute;
 			top: 50%;
-			left: 80px;
+			left: 40px;
 			transform: translateY(-50%);
 		}
 		p {
