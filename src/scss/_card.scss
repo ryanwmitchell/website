@@ -25,7 +25,7 @@
 	}
 	.arrow {
 		position: absolute;
-		top: 20%;
+		top: 35%;
 		color: $lighter-gray;
 		cursor: pointer;
 		padding: 20px;
@@ -36,10 +36,10 @@
 			color: $white;
 		}
 		&.prev {
-			left: -80px;
+			left: -60px;
 		}
 		&.next {
-			right: -80px;
+			right: -60px;
 		}
 		@media (max-width: $breakpoint-large) {
 			padding: 10px;
