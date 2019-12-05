@@ -118,15 +118,72 @@
 	</header>
 	<div class="subheader">
 		<div class="wide">
+			<a href="#directus-suite">Directus Suite</a>
 			<a href="#directus-app">Directus App</a>
 			<a href="#directus-api">Directus API</a>
-			<a href="#directus-suite">Directus Suite</a>
 			<a href="#directus-sdks">SDKs</a>
 			<a href="#marketplace">Marketplace</a>
 			<a href="#tools">Tools</a>
 		</div>
 	</div>
 	<main>
+		<section id="directus-suite">
+			<div class="normal border">
+				<aside>
+					<div class="window small">
+						<img src="img/directus.svg" class="pad-directus">
+					</div>
+					<div>
+						<h3>The Directus Suite<span class="badge accent free">Free</span></h3>
+						<p>The easiest way to self-host Directus. Our suite combines our powerful REST/GraphQL API, intuitive Admin App, and all required dependencies.</p>
+						<div class="buttons">
+							<a href="https://github.com/directus/directus/releases" class="bright" target="_blank">Download the Suite</a>
+							<a href="https://hub.docker.com/r/directus/directus" class="bright ghost docker" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="34" height="23"><g fill="#2196F3" fill-rule="evenodd"><path d="M18.8017 10.5442h3.4333v-3.101h-3.4333zM14.745 10.5442h3.4333v-3.101H14.745v3.101zM10.6892 10.5442h3.4325v-3.101h-3.4334v3.101zM6.6316 10.5442h3.4334v-3.101H6.6316zM2.5759 10.5442h3.4324v-3.101H2.576v3.101zM6.6326 6.8226h3.4324v-3.101H6.6316v3.101zM10.6892 6.8226h3.4325v-3.101h-3.4334v3.101zM14.745 6.8226h3.4333v-3.101H14.745v3.101zM14.745 3.101h3.4333V0H14.745v3.101z"/><path d="M28.752 8.3043c-.1708-1.2412-.8667-2.317-2.1326-3.2901l-.727-.482-.4866.7243c-.6197.9309-.9318 2.2216-.829 3.46.046.4351.19 1.2145.6408 1.8993-.4498.2405-1.3366.572-2.5144.549H.1285l-.045.2589c-.2111 1.2439-.2075 5.1252 2.329 8.1087 1.9269 2.2675 4.8168 3.4178 8.5889 3.4178 8.1757 0 14.2245-3.741 17.0565-10.5406 1.1136.022 3.5132.0064 4.7461-2.3326.0312-.0533.1056-.1947.3204-.638l.1184-.2424-.693-.46c-.75-.4984-2.4723-.681-3.7979-.4323z"/></g></svg> Docker Container</a>
+							<!-- <a href="https://docs.directus.io/getting-started/installation.html" class="ghost bright" target="_blank">How to Install</a> -->
+						</div>
+					</div>
+				</aside>
+				<div class="three-up">
+					<div>
+						<h4>Multitenancy</h4>
+						<p>The Directus Suite allows you to manage multiple databases so you can use one install to connect to any number of projects or environments.</p>
+						<a href="https://docs.directus.io/getting-started/concepts.html#multitenancy" class="blue internal">Learn More</a>
+					</div>
+					<div>
+						<h4>Internationalization</h4>
+						<p>The entire app can be translated, currently supporting 20+ languages, and you can translate your project content into unlimited locales.</p>
+						<a href="https://docs.directus.io/guides/i18n.html" class="blue internal">Learn More</a>
+					</div>
+					<div>
+						<h4>Asset Management</h4>
+						<p>Our digital asset management lets you store files locally or in an S3 bucket, automatically scrapes metadata, and lets you create automatic thumbnails. </p>
+						<a href="https://docs.directus.io/guides/accountability.html#revisions" class="blue internal">Learn More</a>
+					</div>
+				</div>
+				<ul class="features margin-t">
+					<li>
+						<i class="material-icons">linear_scale</i>
+						Custom Workflows
+					</li>
+					<li>
+						<i class="material-icons">account_tree</i>
+						Complex Relationships
+					</li>
+					<li>
+						<i class="material-icons">all_inclusive</i>
+						No Limitations
+					</li>
+					<li>
+						<i class="material-icons">devices_other</i>
+						Omni-Channel
+					</li>
+					<li>
+						<i class="material-icons">extension</i>
+						Fully Extensible
+					</li>
+				</ul>
+			</div>
+		</section>
 		<section id="directus-app">
 			<div class="normal border">
 				<aside>
@@ -144,13 +201,13 @@
 				</aside>
 				<div class="three-up">
 					<div>
-						<h4>Multitenancy</h4>
-						<p>The Directus 7 App is completely decoupled from the API, so you can now use one app to connect to any number of database instances &amp; environments.</p>
+						<h4>Security</h4>
+						<p>In addition to our secure core login, Directus supports two-factor auth (2FA) and single sign-on (SSO) through Google, Twitter, Okta, and others.</p>
 						<a href="https://docs.directus.io/getting-started/concepts.html#multitenancy" class="blue internal">Learn More</a>
 					</div>
 					<div>
-						<h4>Internationalization</h4>
-						<p>Every aspect of the application can now be translated – even schema info like Collection and Field names. We currently support 10+ languages out-of-the-box.</p>
+						<h4>Brand White-Labeling</h4>
+						<p>Our modern App design has options to replace all Directus branding with your own, offers variables for theming, and allows for any desired CSS overrides. </p>
 						<a href="https://docs.directus.io/guides/i18n.html" class="blue internal">Learn More</a>
 					</div>
 					<div>
@@ -177,8 +234,8 @@
 						Drag &amp; Drop
 					</li>
 					<li>
-						<i class="material-icons">extension</i>
-						Fully Extensible
+						<i class="material-icons">supervised_user_circle</i>
+						User Directory
 					</li>
 				</ul>
 			</div>
@@ -237,24 +294,6 @@
 						Storage Adapters
 					</li>
 				</ul>
-			</div>
-		</section>
-		<section id="directus-suite">
-			<div class="normal border">
-				<aside>
-					<div class="window small">
-						<img src="img/directus.svg" class="pad-directus">
-					</div>
-					<div>
-						<h3>The Directus Suite<span class="badge accent free">Free</span></h3>
-						<p>The easiest way to self-host Directus. Our suite combines our powerful REST/GraphQL API, intuitive Admin App, and all required dependencies.</p>
-						<div class="buttons">
-							<a href="https://github.com/directus/directus/releases" class="bright" target="_blank">Download the Suite</a>
-							<a href="https://hub.docker.com/r/directus/directus" class="bright ghost docker" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="34" height="23"><g fill="#2196F3" fill-rule="evenodd"><path d="M18.8017 10.5442h3.4333v-3.101h-3.4333zM14.745 10.5442h3.4333v-3.101H14.745v3.101zM10.6892 10.5442h3.4325v-3.101h-3.4334v3.101zM6.6316 10.5442h3.4334v-3.101H6.6316zM2.5759 10.5442h3.4324v-3.101H2.576v3.101zM6.6326 6.8226h3.4324v-3.101H6.6316v3.101zM10.6892 6.8226h3.4325v-3.101h-3.4334v3.101zM14.745 6.8226h3.4333v-3.101H14.745v3.101zM14.745 3.101h3.4333V0H14.745v3.101z"/><path d="M28.752 8.3043c-.1708-1.2412-.8667-2.317-2.1326-3.2901l-.727-.482-.4866.7243c-.6197.9309-.9318 2.2216-.829 3.46.046.4351.19 1.2145.6408 1.8993-.4498.2405-1.3366.572-2.5144.549H.1285l-.045.2589c-.2111 1.2439-.2075 5.1252 2.329 8.1087 1.9269 2.2675 4.8168 3.4178 8.5889 3.4178 8.1757 0 14.2245-3.741 17.0565-10.5406 1.1136.022 3.5132.0064 4.7461-2.3326.0312-.0533.1056-.1947.3204-.638l.1184-.2424-.693-.46c-.75-.4984-2.4723-.681-3.7979-.4323z"/></g></svg> Docker Container</a>
-							<!-- <a href="https://docs.directus.io/getting-started/installation.html" class="ghost bright" target="_blank">How to Install</a> -->
-						</div>
-					</div>
-				</aside>
 			</div>
 		</section>
 		<!-- <section>
@@ -528,8 +567,8 @@
 				<div class="three-up-alt">
 					<div>
 						<span><i class="material-icons">collections</i></span>
-						<h3>Auto-Thumbnailer</h3>
-						<p>Automatically create thumbnails from higher-resolution images just by requesting a custom URL with parameters.</p>
+						<h3>Asset Generator</h3>
+						<p>Create automatic thumbnails of higher-resolution images just by requesting them with URL parameters.</p>
 						<a href="https://github.com/directus/thumbnailer" class="blue internal" target="_blank">Download on GitHub</a>
 					</div>
 					<div>
@@ -588,7 +627,9 @@
 		</div>
 		<nav class="wide">
 			<div class="left">
-				<a href="/" class="logo"><svg alt="Directus Logo" width="66" height="40" xmlns="http://www.w3.org/2000/svg"><path d="M51.92 24.977a1.574 1.574 0 0 1-.55-.379c.17-1.334.014-2.498.146-3.806.516-5.123 3.724-3.506 6.617-4.317 1.798-.501 3.598-1.535 4.043-3.668a36.706 36.706 0 0 0-6.597-6.052C47.747 1.163 37.505-1.058 28.206.47 31.59 6.4 38.869 9.103 45.398 6.61c-5.4 3.055-11.996 2.148-16.372-1.844-.628.26-1.248.536-1.858.83 4.93 4.729 12.677 5.255 18.23 1.014-.027.042-.495.782-1.1 3.859-1.287 6.538-5.024 6.025-9.626 4.374-9.576-3.441-14.86-.23-19.644-6.813A4.382 4.382 0 0 0 15 15.67a12.897 12.897 0 0 1 5.786-2.232c-3.975 1.216-5.657 3.074-6.498 5.734-1.013 3.203-.575 6.496-5.314 7.364-2.52.133-2.47 1.816-3.361 4.356C4.462 34.18 2.96 35.487 0 38.609c1.206 1.46 2.482 1.656 3.776 1.114 2.657-1.112 4.702-4.544 6.642-6.785 2.148-2.483 7.314-1.42 11.234-3.843 2.678-1.655 4.009-3.862 2.236-7.655a7.345 7.345 0 0 1 1.918 4.566c4.5-.583 10.548 4.904 16.045 5.83a9.395 9.395 0 0 1-1.347-2.26c-.64-1.532-.832-2.916-.699-4.116.512 3.02 3.555 6.892 8.442 7.251 1.245.092 2.6-.046 4.042-.481 1.703-.512 3.258-1.155 5.148-.814 1.4.254 2.675.953 3.487 2.151 1.208 1.785 3.888 2.162 5.076-.022-2.743-7.05-10.137-7.494-13.297-8.316a5.87 5.87 0 0 1-.783-.252z" fill="#FFF" fill-rule="evenodd"/></svg></a>
+				<a href="/" class="logo"><svg width="66" height="40" xmlns="http://www.w3.org/2000/svg">
+				<path d="M52.6937 25.2423c-.3038-.076-.557-.152-.785-.2532-.2278-.1013-.405-.2279-.557-.3798.152-1.342 0-2.5068.1266-3.8235.5064-5.115 3.7223-3.4944 6.6089-4.33 1.7978-.5064 3.5956-1.5446 4.0514-3.6716-1.975-2.3042-4.178-4.33-6.5835-6.0518C47.7308 1.1617 37.5009-1.0666 28.208.478c1.4568 2.544 3.6278 4.4952 6.1463 5.6973 0 0-2.5185 0-4.677-1.6124-.633.2533-1.8998.7515-2.5075 1.0554 4.9377 4.735 12.6607 5.2668 18.206 1.0128-.0252.0507-.5064.785-1.0887 3.8489-1.2914 6.5329-5.0137 6.0264-9.6222 4.3806-9.5714-3.469-14.8383-.2533-19.624-6.8368-1.3927.785-2.2536 2.2536-2.2536 3.8488 0 1.646.9116 3.0386 2.2283 3.7982.7188-.9535 1.041-1.2248 2.2947-1.2248-1.94 1.0998-2.1681 2.0604-3.0037 4.7192-1.0129 3.2158-.5824 6.5076-5.3175 7.3685-2.5068.1266-2.4562 1.8231-3.3678 4.3553C4.482 34.1808 2.9626 35.4975 0 38.612c1.2154 1.4686 2.4815 1.6459 3.7729 1.1141 2.6587-1.1141 4.7098-4.5578 6.6342-6.7861 2.1523-2.4815 7.3179-1.418 11.2173-3.8488 2.6841-1.646 4.0008-3.8742 2.2283-7.647 1.1395 1.266 1.8232 2.8612 1.9244 4.5578 4.5072-.5824 10.5337 4.9123 16.0285 5.8239-.5571-.709-1.0129-1.4687-1.342-2.2536-.6331-1.5193-.8357-2.912-.709-4.1274.5064 3.0132 3.545 6.8874 8.432 7.2419 1.2407.1013 2.608-.0507 4.026-.4811 1.6966-.5064 3.2665-1.1648 5.1403-.8103 1.3926.2532 2.684.9622 3.4943 2.1523 1.2154 1.7725 3.8742 2.1523 5.0643-.0253-2.684-7.014-10.078-7.4698-13.2178-8.28z" fill="#FFF" fill-rule="evenodd"/>
+			</svg></a>
 				<p>
 					© 2019 <a href="http://rangerstudio.com" target="_blank">RANGER Studio, LLC</a><br>
 					All rights reserved.<br>
